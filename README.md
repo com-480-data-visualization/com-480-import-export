@@ -51,7 +51,7 @@ We anticipate two main types of users:
 
 For basic preprocessing, we loaded the dataset and parsed the date column into month and year. We handled missing dates by raising an error but found none. We noticed that the column containing the weight in kg of what is imported or exported seems to be missing often.
 
-We created some plots of product count and total value of merchandise imported/export per year, displayed in `first_look.ipynb`, to gain initial insights into the data. 
+We created some plots of product count and total value of merchandise imported/export per year, displayed in `first_look.ipynb`, to gain initial insights into the data. As an example, we took the import of living reproductive horses in order to see how its trend evolved over time. This confirmed that a grouping by types of products could reveal interesting trends. 
 
 ### Related work
 
