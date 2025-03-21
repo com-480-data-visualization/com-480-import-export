@@ -3,12 +3,17 @@ import numpy as np
 import os
 import matplotlib.pyplot as plt
 import seaborn as sns
+from products_df import Products
+from lands_df import Lands
 
 
 class DataManipulator():
     def __init__(self, paths: list[str], name: str):
         self.paths = paths
         self.name = name
+
+        self.product_data = Products('dataset/OGD_TARIFNUMMER.csv')
+        self.lands_data = Lands('dataset/OGD_LAND.csv')
 
         # data
         dfs = [pd.read_csv(path, sep=';') for path in self.paths] 
@@ -51,4 +56,25 @@ class DataManipulator():
         
     def display(self, n=5):
         print(self.df.head(n))
-            
+    
+    def get_product_name(self, product):
+        product_name = self.product_data.df.loc[self.product_data.df['tn_num'] == product]['tn_f'].values[0]
+        print(f'Product: {product_name}')
+        return product_name
+    
+    def get_product_graph(self, product):
+        product_name = self.get_product_name(product)
+        product_df = self.df[self.df['tn_num'] == product].copy(deep=True)
+        
+        fig, ax = plt.subplots()
+        sns.barplot(x=product_df['year'], y=product_df['chf'], ax=ax, ci=None)
+        ax.set_title(f'[{self.name}] {product_name} Value (CHF)')
+        ax.set_xlabel('Year')
+        ax.set_ylabel('CHF')
+        ax.tick_params(axis='x', rotation=45)
+        plt.tight_layout()
+        plt.show()
+        return product_df
+
+
+
