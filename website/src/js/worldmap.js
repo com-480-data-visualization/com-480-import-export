@@ -2,8 +2,8 @@ import { showDropDown } from './countries_dropdown.js';
 
 
 
-const svgWidth = 1500;
-const svgHeight = 1000;
+const svgWidth = 1400;
+const svgHeight = 700;
 
 const projection = d3.geoMercator()
     .scale(200)
@@ -13,7 +13,7 @@ const geoPath = d3.geoPath().projection(projection);
 
 const switzerlandCoords = [8.2275, 46.8182]; // [lon, lat]
 
-const svg = d3.select('#chart-container')
+const svg = d3.select('#map')
     .append('svg')
     .attr('width', svgWidth)
     .attr('height', svgHeight);
