@@ -19,7 +19,7 @@ const svg = d3.select('#map')
     .attr('height', svgHeight);
 
 export function renderWorldMap() {
-    d3.json('../data/countries.geo.json')
+    d3.json('./data/countries.geo.json')
         .then(worldData => {
             console.log('GeoJSON DATA:', worldData); 
             draw_countries(worldData.features);
