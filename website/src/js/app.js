@@ -3,7 +3,7 @@
 import { renderWorldMap } from './worldmap.js';
 
 
-const dataUrl = '../../../dataset/OGD_LAND.csv';
+const dataUrl = './dataset/OGD_LAND.csv';
 
 function loadData() {
     console.log("loadData called !!----");
