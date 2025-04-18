@@ -61,6 +61,7 @@ function draw_countries(countries) {
             const countryCenter = d3.geoCentroid(d);
             console.log(`Clicked: ${countryName}`);
             drawTradeLine(switzerlandCoords, countryCenter, countryName);
+            highlight_country({properties: { name: countryName }});
         });
 }
 
