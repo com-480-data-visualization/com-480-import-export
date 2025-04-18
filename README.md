@@ -6,7 +6,7 @@
 | Robin Patriarca | 263 711 |
 | Mathis Magnin | 327 838 |
 
-[Milestone 1](#milestone-1) • [Milestone 2](#milestone-2) • [Milestone 3](#milestone-3)
+[Milestone 1](#milestone-1-21st-march-5pm) • [Milestone 2](#milestone-2-18th-april-5pm) • [Milestone 3](#milestone-3-30th-may-5pm)
 
 ## Milestone 1 (21st March, 5pm)
 
@@ -69,6 +69,7 @@ Currently, our inspirations include previous projects from this course, course s
 
 **10% of the final grade**
 
+View our [Milestone 2 PDF Report](milestone2/com-480-ms2.pdf) and the early version of our [website]() featuring the initial structure and layout.
 
 ## Milestone 3 (30th May, 5pm)
 

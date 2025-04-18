@@ -7,6 +7,6 @@ class Lands():
  
 
 if __name__ == "__main__":
-    path = 'dataset/OGD_LAND.csv'
+    path = '../dataset/OGD_LAND.csv'
     products = Lands(path)
     print(products.df.head())

@@ -12,8 +12,8 @@ class DataManipulator():
         self.paths = paths
         self.name = name
 
-        self.product_data = Products('dataset/OGD_TARIFNUMMER.csv')
-        self.lands_data = Lands('dataset/OGD_LAND.csv')
+        self.product_data = Products('../dataset/OGD_TARIFNUMMER.csv', '../dataset/Tarifstruktur.csv')
+        self.lands_data = Lands('../dataset/OGD_LAND.csv')
 
         # data
         dfs = [pd.read_csv(path, sep=';') for path in self.paths] 
