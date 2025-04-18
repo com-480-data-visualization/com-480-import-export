@@ -71,10 +71,6 @@ Currently, our inspirations include previous projects from this course, course s
 
 View our [Milestone 2 PDF Report](milestone2/com-480_ms2.pdf) and the early version of our [website](https://com-480-data-visualization.github.io/com-480-import-export/) featuring the initial structure and layout.
 
-
-https://github.com/com-480-data-visualization/com-480-import-export/blob/master/milestone2/com_480_ms2.pdf
-https://github.com/com-480-data-visualization/com-480-import-export/blob/master/milestone2/com-480-ms2.pdf
-
 ## Milestone 3 (30th May, 5pm)
 
 **80% of the final grade**
