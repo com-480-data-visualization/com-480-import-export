@@ -1,0 +1,117 @@
+{
+    "top_imported_products": {
+        "description": "Top 10 most imported products (by CHF).",
+        "data": {
+            "Gold, incl. gold plated with platinum, in unwrought forms, for non-monetary purposes (excl. gold in powder form) [included in the special trade since 1.1.2012]": 956619755845.0,
+            "Medicaments for therapeutic or prophylactic uses, put up in measured doses, incl. those in the form of transdermal administration systems, or in forms or packings for retail sale (excl. goods of headings 3002, 3004.10 3004.50 to 3005, or 3006)": 294367993022.0,
+            "Articles of jewellery and parts thereof, of precious metal other than silver, whether or not plated or clad with precious metal (excl. articles > 100 years old)": 183685898218.0,
+            "Antisera, other blood fractions and immunological products, whether or not modified or obtained by means of biotechnological processes": 73940275666.0,
+            "Diamonds, worked, but not mounted or set (excl. industrial diamonds)": 63145298785.0,
+            "Petroleum oils and oils obtained from bituminous minerals, crude, not for use as fuel": 62022640203.0,
+            "Unknown (2716.0000)": 61553549082.0,
+            "Motor cars and other motor vehicles principally designed for the transport of persons, incl. station wagons and racing cars, with spark-ignition internal combustion reciprocating piston engine of a cylinder capacity > 1500 cm3 but =< 3000 cm3, weighing > 1200 kg, but =< 1600 kg each (excl. bus of heading 8702 and special motor vehicles of heading 8703.1000)": 61346164381.0,
+            "Medicaments, containing hormones or steroids used as hormones but not containing antibiotics, put up in measured doses, incl. those in the form of transdermal administration systems, or in forms or packings for retail sale (excl. medicaments containing insulin or corticosteroid hormones, their derivatives or structural analogues)": 52825236028.0,
+            "Platinum, unwrought or in powder form": 43546612892.0
+        }
+    },
+    "top_exported_products": {
+        "description": "Top 10 most exported products (by CHF).",
+        "data": {
+            "Gold, incl. gold plated with platinum, in unwrought forms, for non-monetary purposes (excl. gold in powder form) [included in the special trade since 1.1.2012]": 883007632766.0,
+            "Medicaments for therapeutic or prophylactic uses, put up in measured doses, incl. those in the form of transdermal administration systems, or in forms or packings for retail sale (excl. goods of headings 3002, 3004.10 3004.50 to 3005, or 3006)": 669482253703.0,
+            "Antisera, other blood fractions and immunological products, whether or not modified or obtained by means of biotechnological processes": 234374360371.0,
+            "Immunological products, put up in measured doses or in forms or packings for retail sale (excl. diagnostic reagents)": 224732997462.0,
+            "Wrist-watches, whether or not incorporating a stop-watch facility, with automatic winding (excl. those of precious metal or of metal clad with precious metal)": 194047491992.0,
+            "Articles of jewellery and parts thereof, of precious metal other than silver, whether or not plated or clad with precious metal (excl. articles > 100 years old)": 191516042324.0,
+            "Wrist-watches, whether or not incorporating a stop-watch facility, electrically operated, with mechanical display only (excl. those of precious metal or of metal clad with precious metal)": 100817147869.0,
+            "Wrist-watches, whether or not incorporating a stop-watch facility, with automatic winding, with case of precious metal or of metal clad with precious metal (excl. those with backs made of steel)": 95265368695.0,
+            "Unknown (2716.0000)": 76908389391.0,
+            "Gold, incl. gold plated with platinum, in semi-manufactured forms, for non-monetary purposes": 73021827117.0
+        }
+    },
+    "highest_importation_years": {
+        "description": "Top 10 years with highest total import value (CHF).",
+        "data": {
+            "2022": 341005013786.0,
+            "2023": 328950816487.0,
+            "2013": 298394295613.0,
+            "2021": 296503930364.0,
+            "2012": 277543670513.0,
+            "2019": 276058116020.0,
+            "2020": 273766959560.0,
+            "2018": 273389090124.0,
+            "2016": 266137159877.0,
+            "2017": 265571542294.0
+        }
+    },
+    "highest_exportation_years": {
+        "description": "Top 10 years with highest total export value (CHF).",
+        "data": {
+            "2022": 382668097198.0,
+            "2023": 377799896140.0,
+            "2021": 347727709813.0,
+            "2013": 332137247227.0,
+            "2019": 311976706436.0,
+            "2018": 303885759540.0,
+            "2020": 299461579904.0,
+            "2016": 298408001181.0,
+            "2017": 294893856892.0,
+            "2012": 292958202718.0
+        }
+    },
+    "biggest_import_export_diff_products": {
+        "description": "Top 10 products with the largest absolute difference between import and export CHF values.",
+        "data": {
+            "Medicaments for therapeutic or prophylactic uses, put up in measured doses, incl. those in the form of transdermal administration systems, or in forms or packings for retail sale (excl. goods of headings 3002, 3004.10 3004.50 to 3005, or 3006)": {
+                "import_chf": 294367993022.0,
+                "export_chf": 669482253703.0,
+                "abs_diff": 375114260681.0
+            },
+            "Wrist-watches, whether or not incorporating a stop-watch facility, with automatic winding (excl. those of precious metal or of metal clad with precious metal)": {
+                "import_chf": 4324410751.0,
+                "export_chf": 194047491992.0,
+                "abs_diff": 189723081241.0
+            },
+            "Immunological products, put up in measured doses or in forms or packings for retail sale (excl. diagnostic reagents)": {
+                "import_chf": 41842629253.0,
+                "export_chf": 224732997462.0,
+                "abs_diff": 182890368209.0
+            },
+            "Antisera, other blood fractions and immunological products, whether or not modified or obtained by means of biotechnological processes": {
+                "import_chf": 73940275666.0,
+                "export_chf": 234374360371.0,
+                "abs_diff": 160434084705.0
+            },
+            "Wrist-watches, whether or not incorporating a stop-watch facility, electrically operated, with mechanical display only (excl. those of precious metal or of metal clad with precious metal)": {
+                "import_chf": 3746072640.0,
+                "export_chf": 100817147869.0,
+                "abs_diff": 97071075229.0
+            },
+            "Wrist-watches, whether or not incorporating a stop-watch facility, with automatic winding, with case of precious metal or of metal clad with precious metal (excl. those with backs made of steel)": {
+                "import_chf": 6688646908.0,
+                "export_chf": 95265368695.0,
+                "abs_diff": 88576721787.0
+            },
+            "Gold, incl. gold plated with platinum, in unwrought forms, for non-monetary purposes (excl. gold in powder form) [included in the special trade since 1.1.2012]": {
+                "import_chf": 956619755845.0,
+                "export_chf": 883007632766.0,
+                "abs_diff": 73612123079.0
+            },
+            "Gold, incl. gold plated with platinum, in semi-manufactured forms, for non-monetary purposes": {
+                "import_chf": 7384282639.0,
+                "export_chf": 73021827117.0,
+                "abs_diff": 65637544478.0
+            },
+            "Petroleum oils and oils obtained from bituminous minerals, crude, not for use as fuel": {
+                "import_chf": 62022640203.0,
+                "export_chf": 4452340.0,
+                "abs_diff": 62018187863.0
+            },
+            "Motor cars and other motor vehicles principally designed for the transport of persons, incl. station wagons and racing cars, with spark-ignition internal combustion reciprocating piston engine of a cylinder capacity > 1500 cm3 but =< 3000 cm3, weighing > 1200 kg, but =< 1600 kg each (excl. bus of heading 8702 and special motor vehicles of heading 8703.1000)": {
+                "import_chf": 61346164381.0,
+                "export_chf": 2213372515.0,
+                "abs_diff": 59132791866.0
+            }
+        }
+    }
+}

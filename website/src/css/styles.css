@@ -40,15 +40,16 @@ body, html {
   }
   
   /* ==== Layout Container ==== */
+
   .container {
-    position: relative;
-    height: calc(100vh - 80px);
-    display: flex;
-    flex-direction: column;
-    overflow: hidden;
-    width: 80%;
-    margin: auto;
-  }
+  position: relative;
+  min-height: calc(100vh - 80px); 
+  display: flex;
+  flex-direction: column;
+  overflow: auto; 
+  width: 80%;
+  margin: auto;
+}
   
   /* ==== Trade Tabs ==== */
   .trade-tab-group {
@@ -219,7 +220,7 @@ body, html {
   
   /* ==== Visualization Area ==== */
   .visualization {
-    height: 500px;
+    height: 1000px;
     background: #ffffff;
     padding: 1rem 2rem;
     z-index: 1;
@@ -240,5 +241,14 @@ body, html {
     background: #fafafa;
     border-top: 1px solid #ddd;
   }
-  
+
+  /* ==== Mouse on the bins ==== */
+  .tooltip {
+    position: absolute;
+    opacity: 0;
+    transition: opacity 0.2s ease-in-out;
+    pointer-events: none;
+    z-index: 10;
+  }
+
   

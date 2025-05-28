@@ -19,23 +19,17 @@
   <main class="container">
     <p>This graph represents the top 10 trade statistics based on user selection. Use the tabs below to switch between Import, Export, and Growth metrics. And I want to see if the text goes automaticaly to the line.</p>
     <section class="visualization">
+      <form>
+        <label><input type="radio" name="tradeType" value="exports" checked> Top Exported Products</label><br>
+        <label><input type="radio" name="tradeType" value="imports"> Top Imported Products</label><br>
+        <label><input type="radio" name="tradeType" value="import_years"> Highest Import Years</label><br>
+        <label><input type="radio" name="tradeType" value="export_years"> Highest Export Years</label><br>
+        <label><input type="radio" name="tradeType" value="abs_diff"> Products with Largest Abs Import-Export Diff</label><br>
+      </form>
 
-      
-      <!-- Trade type selection using modern pill buttons -->
-      <div id="tradeTypeFilter" class="trade-toggle-group">
-        <input type="radio" id="btn-export" name="tradeType" value="exports" checked>
-        <label for="btn-export" class="trade-toggle">Export</label>
-
-        <input type="radio" id="btn-import" name="tradeType" value="imports">
-        <label for="btn-import" class="trade-toggle">Import</label>
-
-        <input type="radio" id="btn-growth" name="tradeType" value="growth">
-        <label for="btn-growth" class="trade-toggle">Growth</label>
-      </div>
-
-      <div id="graph" style="margin-bottom: 60px;">
+      <div id="graph" style="margin-bottom: 60px; overflow-x: auto;">
         <h3>Top 10 Statistics</h3>
-        <svg id="barChart" width="800" height="500"></svg>
+        <svg id="barChart" width="800" height="550" style="max-width: 100%;"></svg>
       </div>
 
       
@@ -48,6 +42,6 @@
   </footer>
   
   <script src="https://d3js.org/d3.v7.min.js"></script>
-  <script src="src/statsjs/stats.js"></script>
+  <script src="src/jsstats/stats.js"></script>
 </body>
 </html>
