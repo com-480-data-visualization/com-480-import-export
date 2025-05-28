@@ -1,4 +1,5 @@
-// Dummy data
+// src/statsjs/stats.js
+
 const dataOptions = {
   exports: [
     { name: "Gold", value: 120 },
@@ -38,10 +39,10 @@ const dataOptions = {
   ]
 };
 
-const svg = d3.select("svg");
+const svg = d3.select("#barChart");
 const width = +svg.attr("width") - 40;
 const height = +svg.attr("height") - 40;
-const margin = { top: 20, right: 20, bottom: 20, left: 60 };
+const margin = { top: 20, right: 20, bottom: 80, left: 60 };
 
 function updateChart(stat) {
   const data = dataOptions[stat];
@@ -55,6 +56,7 @@ function updateChart(stat) {
 
   const y = d3.scaleLinear()
     .domain([0, d3.max(data, d => d.value)])
+    .nice()
     .range([height - margin.bottom, margin.top]);
 
   svg.append("g")
@@ -62,11 +64,14 @@ function updateChart(stat) {
     .call(d3.axisBottom(x))
     .selectAll("text")
     .attr("transform", "rotate(-45)")
-    .style("text-anchor", "end");
+    .style("text-anchor", "end")
+    .style("font-family", "Segoe UI, Arial, sans-serif");
 
   svg.append("g")
     .attr("transform", `translate(${margin.left},0)`)
-    .call(d3.axisLeft(y));
+    .call(d3.axisLeft(y))
+    .selectAll("text")
+    .style("font-family", "Segoe UI, Arial, sans-serif");
 
   svg.selectAll("rect")
     .data(data)
@@ -79,9 +84,9 @@ function updateChart(stat) {
     .attr("fill", "#6a5acd");
 }
 
-// Initial load
+// Initial chart
 updateChart("exports");
 
-d3.select("#stat-select").on("change", function () {
+d3.selectAll("input[name='tradeType']").on("change", function () {
   updateChart(this.value);
 });

@@ -91,7 +91,45 @@ body, html {
     background-color: #6a5acd;
     border-radius: 2px;
   }
-  
+
+  /* ==== Trade Toggle Buttons ==== */
+  .trade-toggle-group {
+    position: absolute;
+    top: 100px;
+    right: 20px;
+    background-color: white;
+    border-radius: 12px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    padding: 0.5rem;
+    display: flex;
+    gap: 0.5rem;
+    z-index: 1000;
+  }
+
+  .trade-toggle-group input[type="radio"] {
+    display: none;
+  }
+
+  .trade-toggle-group .trade-toggle {
+    cursor: pointer;
+    font-weight: 500;
+    color: #444;
+    background-color: #f0f0f0;
+    padding: 0.4rem 1rem;
+    border-radius: 999px;
+    transition: all 0.2s ease-in-out;
+    border: 2px solid transparent;
+  }
+
+  .trade-toggle-group input[type="radio"]:checked + .trade-toggle {
+    background-color: #6a5acd;
+    color: white;
+    border-color: #6a5acd;
+  }
+
+  .trade-toggle-group .trade-toggle:hover {
+    background-color: #e0e0e0;
+  }
   /* ==== Map ==== */
   #map {
     flex: 1;
@@ -181,7 +219,7 @@ body, html {
   
   /* ==== Visualization Area ==== */
   .visualization {
-    height: 220px;
+    height: 500px;
     background: #ffffff;
     padding: 1rem 2rem;
     z-index: 1;
