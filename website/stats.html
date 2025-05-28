@@ -17,16 +17,24 @@
   </header>
 
   <main class="container">
-    
     <section class="visualization">
+      <div id="controls">
+        <label for="stat-select">Choose statistic:</label>
+        <select id="stat-select">
+          <option value="exports">Top 10 Exports</option>
+          <option value="imports">Top 10 Imports</option>
+          <option value="growth">Top 10 Growth</option>
+        </select>
+      </div>
+
       <div id="graph">
         <h3>Graph</h3>
-         <!-- include a graph here -->
+        <svg width="800" height="220"></svg>
       </div>
     </section>
   </main>
 
   <script src="https://d3js.org/d3.v7.min.js"></script>
-  <script src="src/js/stats.js"></script>
+  <script src="src/statsjs/stats.js"></script>
 </body>
 </html>
