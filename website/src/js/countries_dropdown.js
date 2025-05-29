@@ -26,12 +26,12 @@ export async function showDropDown(countries, onSelectCountry) {
         const selected_country = this.value;
         console.log('Selected country:', selected_country);
 
-        const selectedCountryData = countryOptionsSorted.find(d => d.map_name === selected_country);
+        const selectedCountryData = countryOptionsSorted.find(d => d.ctry_id === selected_country);
         if (selectedCountryData) {
             console.log('Corresponding ctry_id:', selectedCountryData.ctry_id);
 
             // Find the corresponding country data from the geoJson file
-            const geoJsonCountryData = countries.find(d => d.properties.name === selected_country);
+            const geoJsonCountryData = countries.find(d => d.properties.name === selectedCountryData.map_name);
             if (geoJsonCountryData) {
                 onSelectCountry(geoJsonCountryData);
             } else {

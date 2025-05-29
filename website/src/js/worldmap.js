@@ -48,7 +48,28 @@ function highlight_country(country_data) {
         svg.selectAll('.country')
             .filter(d => d.properties.name === country_data.properties.name)
             .attr('fill', 'orange');
+
+        // Update the dropdown selection
+        const dropdown = d3.select('#countries-dropdown');
+        const selectedOption = dropdown.selectAll('option')
+            .filter(d => d.map_name === country_data.properties.name);
+        console.log("selected", selectedOption.datum())
+        if (!selectedOption.empty()) {
+            const currentDropdownValue = dropdown.property('value');
+            const newDropdownValue = selectedOption.datum().ctry_id;
+
+            // Only update the dropdown if the value is different
+            if (currentDropdownValue !== newDropdownValue) {
+                dropdown.property('value', newDropdownValue); // Set the dropdown value
+                dropdown.dispatch('change'); // Trigger the change event
+            }
+        }
     }
+}
+
+function reset_map() {
+    svg.selectAll('.country')
+        .attr('fill', '#e0e0e0');
 }
 
 function draw_countries(countries) {

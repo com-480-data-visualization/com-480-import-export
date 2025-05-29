@@ -19,30 +19,32 @@
   <!-- <button class="toggle-btn">☰ Filters</button> -->
   <div id="sidebar">
     <!-- <button class="close-btn">✖</button> -->
-    <h2>Filters</h2>
+    <!-- <h2>Filters</h2> -->
     <form id="filter-form">
 
-      <section>
-        <div id="tradeTypeFilter" class="trade-tab-group">
-          <input type="radio" id="tab-import" name="tradeType" value="import" checked>
-          <label for="tab-import" class="trade-tab">Import</label>
-          <input type="radio" id="tab-export" name="tradeType" value="export">
-          <label for="tab-export" class="trade-tab">Export</label>
-          <input type="radio" id="tab-both" name="tradeType" value="both">
-          <label for="tab-both" class="trade-tab">Both</label>
-        </div>
-      </section>
-
-      <section>
-        <div id="countriesFilter" class="overlay-box">
-          <h3>Countries</h3>
-          <div id="countryList" class="checkbox-list">
-            <select id="countries-dropdown">
-              <option value="">Select a country</option>
-            </select>
+      <div id="filtersContainer">
+        <section>
+          <div id="tradeTypeFilter" class="trade-tab-group">
+            <input type="radio" id="tab-import" name="tradeType" value="import" checked>
+            <label for="tab-import" class="trade-tab">Import</label>
+            <input type="radio" id="tab-export" name="tradeType" value="export">
+            <label for="tab-export" class="trade-tab">Export</label>
+            <input type="radio" id="tab-both" name="tradeType" value="both">
+            <label for="tab-both" class="trade-tab">Both</label>
           </div>
-        </div>
-      </section>
+        </section>
+
+        <section>
+          <div id="countriesFilter" class="overlay-box">
+            <h3>Country</h3>
+            <div id="countryList" class="checkbox-list">
+              <select id="countries-dropdown">
+                <option value="">Select a country</option>
+              </select>
+            </div>
+          </div>
+        </section>
+      </div>
 
       <section>
         <div id="dateFilter" class="overlay-box">

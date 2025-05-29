@@ -59,13 +59,16 @@ body, html {
     /* position: absolute; */
     /* top: 100px; */
     /* left: 20px; */
-    background-color: pink;
+    width: 50px;
+    background-color: #dbd7fa;
     border-radius: 12px;
     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
     padding: 0.5rem 1rem;
     display: flex;
-    gap: 1.5rem;
+    flex-direction: column;
+    gap: 0.5rem;
     z-index: 1000;
+    text-align: center;
   }
   
   .trade-tab-group input[type="radio"] {
@@ -79,6 +82,7 @@ body, html {
     position: relative;
     padding-bottom: 8px;
     transition: all 0.3s ease-in-out;
+    margin-bottom: 0px;
   }
   
   .trade-tab-group input[type="radio"]:checked + .trade-tab {
@@ -146,16 +150,33 @@ body, html {
   /* ==== Overlay Filters ==== */
   .overlay-box {
     /* position: absolute; */
-    background: rgba(124, 240, 255, 0.95);
+    background: #dbd7fa;
     border-radius: 12px;
     padding: 0.5rem;
     width: 180px;
     /* z-index: 5; */
   }
+
+  #filtersContainer {
+    display: flex;
+    gap: 1.5rem;               /* space between sections */
+    align-items: flex-start;
+  }
   
   #countriesFilter {
-    height: 100px;
+    height: 95px;
+    width: 250px;
+    /* width: auto; */
+    flex: 1;
+  }
+
+  #countriesFilter select {
     width: auto;
+    padding: 0.4rem;
+    margin: 0 0.5rem;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    font-size: 0.85rem;
   }
   
   #productsFilter {
@@ -340,13 +361,13 @@ body, html {
 
   /* ==== Product Selector ==== */
    #product-selector {
-    overflow-y: auto;
+    /* overflow-y: auto; */
     overflow-x: hidden;
     height: 90%;
     max-height: 90%;
     /* width: 100%; */
     width: auto;
-    background: #fff;
+    /* background: #dbd7fa; */
     border-radius: 0px;
     border: 0px solid #eee;
     padding: 0rem;
@@ -354,6 +375,7 @@ body, html {
     flex: 1 1 auto;
     margin-left: 0.5rem;
     margin-right: 0.5rem;
+    overflow-y: scroll;
   }
 
   #product-selector * {
