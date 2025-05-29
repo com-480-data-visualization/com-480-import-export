@@ -1,14 +1,14 @@
 const svg = d3.select("#barChart");
-const width = +svg.attr("width") - 40;
-const height = +svg.attr("height") - 40;
-const margin = { top: 20, right: 20, bottom: 200, left: 80 }; 
+const width = +svg.attr("width") ;
+const height = +svg.attr("height") ;
+const margin = { top: 20, right: 20, bottom: 100, left: 80 }; 
 
 const chartDescriptions = {
   exports: "Between 1988 and 2023, Switzerland’s top exports closely aligned with its strengths in precision manufacturing, finance, and luxury goods. Key export items included gold, diamonds, jewelry, and platinum, often re-exported after refinement or incorporation into high-end products. These materials supported Switzerland’s reputation as a global center for luxury and value-added processing. One of the country’s most iconic exports was watches, reflecting centuries of expertise in horology. Swiss watches, renowned for their craftsmanship and precision, contributed significantly to the country's global image and export revenues. The pharmaceutical industry was another major pillar, with medications consistently ranking among the top exports thanks to Switzerland's world-class research and production facilities. Although the country has limited natural resources, it also exported electricity at times when domestic production—particularly from hydroelectric sources—exceeded demand.",
   imports: "Between 1988 and 2023, Switzerland's top imports consistently reflected its role as a global financial and trading hub. Among the most significant imported goods were gold, diamonds, jewelry, and platinum, driven by Switzerland’s strong watchmaking and luxury goods industries. These precious materials were often imported for refining, processing, or inclusion in high-value products for re-export. In addition to luxury commodities, medications represented a major import category, supporting Switzerland’s advanced pharmaceutical sector. Unrefined oil was also a key import, necessary for the country’s limited domestic energy resources. Electricity imports became increasingly important to complement national production and ensure grid stability, especially during periods of high demand or low domestic output. The import of cars remained substantial, reflecting Switzerland's high per-capita income and demand for private transportation. Over the decades, these categories have shaped Switzerland’s import landscape, reflecting both industrial needs and consumer preferences in a highly developed economy.",
   import_years: "Over the last ten years, Switzerland’s import activity has remained robust and consistent, reflecting the country’s role as a global trading hub and industrial center. The top import years included a steady progression of high trade volumes, with only slight dips in 2014 and 2015, which still ranked within the top ten despite being outpaced by earlier peaks in 2012 and 2013. Import trends over the decade showed strong resilience, even through global challenges like the COVID-19 pandemic, with only temporary slowdowns. The country’s strategic focus on value-added processing and consumption of essential goods maintained a high level of trade continuity and diversity.",
-  export_years: "Switzerland’s export performance over the most recent decade has shown remarkable stability and strength. All ten years, including 2014 and 2015, featured high export values, with only slightly lower volumes in those two years compared to peak years like 2012 and 2013. The Swiss economy maintained a near-balanced trade flow throughout the period, with exports closely tracking imports in both scale and structure. Demand for Swiss products remained high globally, thanks to their reputation for quality, precision, and innovation, even in economically uncertain times.",
-  abs_diff: "Between 1988 and 2023, Switzerland’s trade balance by category revealed key sectors with the highest absolute difference between exports and imports—highlighting both major export strengths and critical import dependencies. At the top of this list were medications, with Switzerland exporting far more than it imported, thanks to its robust pharmaceutical industry led by global giants like Novartis and Roche. Watches also showed a large positive trade balance, reinforcing Switzerland's global dominance in luxury timepieces. In contrast, unrefined oil had a major negative trade balance, as Switzerland lacks significant domestic fossil fuel resources and relies heavily on imports to meet energy needs. Cars similarly showed a large import surplus, reflecting strong domestic demand despite minimal local automotive production. Gold appeared as a high-difference category in both directions: Switzerland imported massive quantities of raw or semi-processed gold, refined it, and re-exported it in high value-added forms, often resulting in large fluctuations between import and export values. Other categories with significant absolute trade differences included jewelry, platinum, and diamonds, reflecting Switzerland's role in refining and re-exporting precious materials. This pattern illustrates a unique economic model—importing raw luxury materials and exporting refined, high-value products."
+  export_years: "Switzerland’s export performance over the most recent decade has shown remarkable stability and strength. All ten years, including 2014 and 2015, featured high export values, with only slightly lower volumes in those two years compared to peak years like 2012 and 2013. The Swiss economy maintained a near-balanced trade flow throughout the period, with exports closely tracking imports in both scale and structure. Demand for Swiss products remained high globally, thanks to their reputation for quality, precision, and innovation, even in economically uncertain times like the COVID-19 pandemic.",
+  abs_diff: "Between 1988 and 2023, Switzerland’s trade balance by category highlighted major export strengths and key import dependencies. Medications led exports due to the strong pharmaceutical sector, while watches confirmed Swiss dominance in luxury goods. On the import side, unrefined oil and cars showed large deficits, reflecting energy needs and limited domestic auto production. Gold stood out for both high imports and exports, as Switzerland refines and re-exports precious metals. Other significant categories included jewelry, platinum, and diamonds—pointing to Switzerland’s role in high-value material processing."
 };
 
 let dataOptions = {};
@@ -16,12 +16,21 @@ let dataOptions = {};
 d3.json("./datastats/top10stats.json").then(data => {
   // Convert to usable format
   dataOptions = {
-    exports: Object.entries(data.top_exported_products.data).map(([name, value]) => ({ name, value })),
-    imports: Object.entries(data.top_imported_products.data).map(([name, value]) => ({ name, value })),
-    import_years: Object.entries(data.highest_importation_years.data).map(([year, value]) => ({ name: year, value })),
-    export_years: Object.entries(data.highest_exportation_years.data).map(([year, value]) => ({ name: year, value })),
+    exports: Object.entries(data.top_exported_products.data).map(([name, value]) => ({
+      name,
+      short_name: value.short_name || name,
+      value: value.value
+    })),
+    imports: Object.entries(data.top_imported_products.data).map(([name, value]) => ({
+      name,
+      short_name: value.short_name || name,
+      value: value.value
+    })),
+    import_years: Object.entries(data.highest_importation_years.data).map(([year, value]) => ({ name: year,short_name: year, value })),
+    export_years: Object.entries(data.highest_exportation_years.data).map(([year, value]) => ({ name: year,short_name: year, value })),
     abs_diff: Object.entries(data.biggest_import_export_diff_products.data).map(([name, obj]) => ({
       name,
+      short_name: obj.short_name || name,
       value: obj.abs_diff
     }))
   };
@@ -37,7 +46,7 @@ function updateChart(stat) {
   svg.selectAll("*").remove();
 
   const x = d3.scaleBand()
-    .domain(data.map(d => d.name))
+    .domain(data.map(d => d.short_name))
     .range([margin.left, width - margin.right])
     .padding(0.1);
 
@@ -83,7 +92,7 @@ function updateChart(stat) {
     .data(data)
     .enter()
     .append("rect")
-    .attr("x", d => x(d.name))
+    .attr("x", d => x(d.short_name))
     .attr("y", d => y(d.value))
     .attr("width", x.bandwidth())
     .attr("height", d => height - margin.bottom - y(d.value))
@@ -154,7 +163,8 @@ d3.json("./datastats/piechart.json").then(data => {
 
 function renderPieButtons(categories) {
   const container = d3.select("#categoryButtons");
-  container.selectAll("button")
+
+  const buttons = container.selectAll("button")
     .data(categories)
     .enter()
     .append("button")
@@ -165,6 +175,8 @@ function renderPieButtons(categories) {
       d3.selectAll("#categoryButtons button").classed("active", false);
       d3.select(this).classed("active", true);
     });
+
+  buttons.filter((d, i) => i === 0).classed("active", true);
 }
 
 function updatePieChart(categoryCode) {
