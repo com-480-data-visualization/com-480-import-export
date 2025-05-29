@@ -4,11 +4,11 @@ const height = +svg.attr("height") - 40;
 const margin = { top: 20, right: 20, bottom: 200, left: 80 }; 
 
 const chartDescriptions = {
-  exports: "This chart shows the top 10 products exported from Switzerland, based on value.",
-  imports: "This chart shows the top 10 products imported into Switzerland.",
-  import_years: "These are the years with the highest total imports recorded.",
-  export_years: "These are the years with the highest total exports recorded.",
-  abs_diff: "These products show the largest absolute differences between imports and exports."
+  exports: "Between 1988 and 2023, Switzerland’s top exports closely aligned with its strengths in precision manufacturing, finance, and luxury goods. Key export items included gold, diamonds, jewelry, and platinum, often re-exported after refinement or incorporation into high-end products. These materials supported Switzerland’s reputation as a global center for luxury and value-added processing. One of the country’s most iconic exports was watches, reflecting centuries of expertise in horology. Swiss watches, renowned for their craftsmanship and precision, contributed significantly to the country's global image and export revenues. The pharmaceutical industry was another major pillar, with medications consistently ranking among the top exports thanks to Switzerland's world-class research and production facilities. Although the country has limited natural resources, it also exported electricity at times when domestic production—particularly from hydroelectric sources—exceeded demand.",
+  imports: "Between 1988 and 2023, Switzerland's top imports consistently reflected its role as a global financial and trading hub. Among the most significant imported goods were gold, diamonds, jewelry, and platinum, driven by Switzerland’s strong watchmaking and luxury goods industries. These precious materials were often imported for refining, processing, or inclusion in high-value products for re-export. In addition to luxury commodities, medications represented a major import category, supporting Switzerland’s advanced pharmaceutical sector. Unrefined oil was also a key import, necessary for the country’s limited domestic energy resources. Electricity imports became increasingly important to complement national production and ensure grid stability, especially during periods of high demand or low domestic output. The import of cars remained substantial, reflecting Switzerland's high per-capita income and demand for private transportation. Over the decades, these categories have shaped Switzerland’s import landscape, reflecting both industrial needs and consumer preferences in a highly developed economy.",
+  import_years: "Over the last ten years, Switzerland’s import activity has remained robust and consistent, reflecting the country’s role as a global trading hub and industrial center. The top import years included a steady progression of high trade volumes, with only slight dips in 2014 and 2015, which still ranked within the top ten despite being outpaced by earlier peaks in 2012 and 2013. Import trends over the decade showed strong resilience, even through global challenges like the COVID-19 pandemic, with only temporary slowdowns. The country’s strategic focus on value-added processing and consumption of essential goods maintained a high level of trade continuity and diversity.",
+  export_years: "Switzerland’s export performance over the most recent decade has shown remarkable stability and strength. All ten years, including 2014 and 2015, featured high export values, with only slightly lower volumes in those two years compared to peak years like 2012 and 2013. The Swiss economy maintained a near-balanced trade flow throughout the period, with exports closely tracking imports in both scale and structure. Demand for Swiss products remained high globally, thanks to their reputation for quality, precision, and innovation, even in economically uncertain times.",
+  abs_diff: "Between 1988 and 2023, Switzerland’s trade balance by category revealed key sectors with the highest absolute difference between exports and imports—highlighting both major export strengths and critical import dependencies. At the top of this list were medications, with Switzerland exporting far more than it imported, thanks to its robust pharmaceutical industry led by global giants like Novartis and Roche. Watches also showed a large positive trade balance, reinforcing Switzerland's global dominance in luxury timepieces. In contrast, unrefined oil had a major negative trade balance, as Switzerland lacks significant domestic fossil fuel resources and relies heavily on imports to meet energy needs. Cars similarly showed a large import surplus, reflecting strong domestic demand despite minimal local automotive production. Gold appeared as a high-difference category in both directions: Switzerland imported massive quantities of raw or semi-processed gold, refined it, and re-exported it in high value-added forms, often resulting in large fluctuations between import and export values. Other categories with significant absolute trade differences included jewelry, platinum, and diamonds, reflecting Switzerland's role in refining and re-exporting precious materials. This pattern illustrates a unique economic model—importing raw luxury materials and exporting refined, high-value products."
 };
 
 let dataOptions = {};
@@ -192,7 +192,7 @@ function updatePieChart(categoryCode) {
     .on("mouseover", function (event, d) {
       pieTooltip
         .style("opacity", 1)
-        .html(`<strong>${d.data.name}</strong><br/>${(d.data.value / total * 100).toFixed(2)}% (${d.data.value.toLocaleString()})`);
+        .html(`<strong>${d.data.name}</strong><br/>${Math.round(d.data.value / 1_000_000).toLocaleString()} Million CHF`);
       d3.select(this).attr("stroke", "#333").attr("stroke-width", 2);
     })
     .on("mousemove", function (event) {
@@ -254,7 +254,7 @@ function updatePieChart(categoryCode) {
     .on("mouseover", function (event, d) {
       pieTooltip
         .style("opacity", 1)
-        .html(`<strong>${d.data.name}</strong><br/>${(d.data.value / exportTotal * 100).toFixed(2)}% (${d.data.value.toLocaleString()})`);
+        .html(`<strong>${d.data.name}</strong><br/>${Math.round(d.data.value / 1_000_000).toLocaleString()} Million CHF`);
       d3.select(this).attr("stroke", "#333").attr("stroke-width", 2);
     })
     .on("mousemove", function (event) {

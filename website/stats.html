@@ -17,10 +17,8 @@
   </header>
 
   <main class="container">
-    <p>This graph represents the top 10 trade statistics based on user selection. Use the tabs below to switch between Import, Export, and Growth metrics. And I want to see if the text goes automaticaly to the line.</p>
+    <p>This series of graphs provides an overview of Switzerland’s international trade dynamics over the past fourty years, focusing on the country's top import and export categories, peak trading years, and sectors with the greatest trade imbalances. The data reflects Switzerland’s unique economic structure—marked by its dominance in pharmaceuticals, luxury goods, and precious metals processing, as well as its reliance on imports for energy and transportation. Together, these graphs illustrate the stability, specialization, and high value-added nature of Swiss trade, highlighting the country's strategic role in global supply chains and luxury manufacturing.</p>
     <section class="visualization">
-
-
       <div id="graph" style="margin-bottom: 60px; overflow-x: auto;">
         <h3>Top 10 Statistics</h3>
           <form>
@@ -33,10 +31,15 @@
         <svg id="barChart" width="800" height="550" style="max-width: 100%;"></svg>
         <p id="barDescription" style="margin-top: 1em; font-style: italic;"></p>
       </div>
-
-      
     </section>
-    <p>These statistics are based on dummy values and will be updated with real trade data. Each bar represents a distinct trade category and its corresponding value. </p>
+
+    <p>From 1988 to 2023, Switzerland's trade patterns reveal a clear geographical and strategic structure in both imports and exports. Across most trade categories, the most consistently represented partners have been neighboring (limitroph) countries—namely Germany, France, Italy, and Austria. These close partners benefit from geographic proximity, strong historical ties, and deep integration with Switzerland’s economy, making them reliable trade counterparts for a wide range of goods.</p>
+
+    <p>In both imports and exports, these neighboring countries are followed by a broader group of European and economically powerful nations such as the United States, United Kingdom, China, and Japan. These countries play a major role in the trade of high-value goods, particularly in pharmaceuticals, luxury items, and precision instruments.</p>
+
+    <p>On the import side, there is also a notable presence of smaller, specialized countries that are prominent in specific trade categories. For instance, South Africa and Peru are important sources for gold, Belgium for diamonds, and Ireland for pharmaceuticals. These countries may not have broad trade relationships with Switzerland overall, but they are key suppliers in niche or high-demand sectors, reflecting Switzerland’s reliance on specialized inputs for its value-added industries.</p>
+
+    <p>Overall, Switzerland’s trade geography reflects a blend of regional integration, global economic alignment, and strategic sourcing, shaped by its role as both a manufacturing center and a global trading platform. </p>
     
     <section class="visualization">
       <div id="pieControls">
@@ -61,6 +64,6 @@
   </footer>
   
   <script src="https://d3js.org/d3.v7.min.js"></script>
-  <script src="src/jsstats/stats.js"></script>
+  <script type="module" src="src/jsstats/stats.js"></script>
 </body>
 </html>
