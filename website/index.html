@@ -41,16 +41,17 @@
 
   <div id="productsFilter" class="overlay-box">
     <h3>Products</h3>
-    <div id="productList" class="checkbox-list"></div>
+    <div id="product-selector"></div>
+    <!--<button id="log-selection" type="button">Log Selected Product</button> -->
   </div>
 
   <div id="dateFilter" class="overlay-box">
     <h3>Choose Period</h3>
     <label for="startDate">Start</label>
-    <input type="text" id="startDate" placeholder="YYYY">
+    <input type="text" id="startDate" placeholder="mm.yyyy">
   
     <label for="endDate">End</label>
-    <input type="text" id="endDate" placeholder="YYYY">
+    <input type="text" id="endDate" placeholder="mm.yyyy">
   </div>
 
   <main class="container">
@@ -65,10 +66,11 @@
     <button id="loadData">Load Data</button>
 
     <!-- time dependency graph -->
-    <section class="visualization">
-      <div id="graph">
-        <h3>Trade Trends</h3>
-      </div>
+    <section class="tradeVisualization">
+      <h3>Trade Trends</h3>
+      <button id="toggleTrendData" style="margin-top:1rem;">Toggle Trend Data</button>
+
+      <div id="graph"></div>
     </section>
   </main>
 
@@ -77,6 +79,14 @@
   </footer>
 
   <script type="module" src="src/js/app.js"></script>
+  <!-- Add this script to load your product selector logic -->
+  <script src="src/js/product_list.js"></script>
+  <script>
+    // Initialize the product selector after DOM is ready
+    window.addEventListener('DOMContentLoaded', () => {
+      if (window.initProductList) window.initProductList();
+    });
+  </script>
 
   <!-- <script src="js/map.js"></script> -->
 </body>
