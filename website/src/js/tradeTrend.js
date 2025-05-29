@@ -113,21 +113,21 @@ export function initTradeTrend() {
             btn.onclick = async () => {
                 const tradeTypeFilter = document.querySelector('input[name="tradeType"]:checked').value; // 'import', 'export', 'both'
                 // const dateFilter = document.getElementById('dateFilter').value; // e.g., '2020-2024'
-                const startDate = document.getElementById('startDate').value // '2020'
-                const endDate = document.getElementById('endDate').value // '2022'
+                const startDate = document.getElementById('startDate').value // '2020-01'
+                const endDate = document.getElementById('endDate').value // '2022-12'
                 if(!startDate || !endDate) {
                     alert("Please select a start and end date");
                     return;
                 }
-                const ctryId = '112' // document.getElementById('countryFilter').value; // Country ID
+                const ctryId = document.getElementById('countries-dropdown').value // Country ID
                 if(!ctryId) {
-                    alert("Please select at least 1 country");
+                    alert("Please select 1 country");
                     return;
                 }
                 const tnNum = '0101.1100' // document.getElementById('tnFilter').value; // Trade number
                 console.log("Trade Type Filter:", tradeTypeFilter, "Start Date:", startDate, "End Date:", endDate, "Country ID:", ctryId, "Trade Number:", tnNum);
-                const startYear = startDate.split('.')[1]; // Extract year from '01.2020'
-                const endYear = endDate.split('.')[1]; // Extract year from '12.2022'
+                const startYear = startDate.split('-')[0]; // Extract year
+                const endYear = endDate.split('-')[0]; // Extract year
                 let fetchedData;
                 if (tradeTypeFilter === 'import') {
                     fetchedData = await fetchImportData(startYear, endYear, ctryId, tnNum);

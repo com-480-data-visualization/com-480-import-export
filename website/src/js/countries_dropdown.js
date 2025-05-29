@@ -18,7 +18,7 @@ export async function showDropDown(countries, onSelectCountry) {
         .data(countryOptions)
         .enter()
         .append('option')
-        .attr('value', d => d.map_name)
+        .attr('value', d => d.ctry_id)
         .text(d => d.map_name);
 
     
