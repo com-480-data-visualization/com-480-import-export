@@ -251,4 +251,41 @@ body, html {
     z-index: 10;
   }
 
-  
+  /* === pie chart === */
+  #pieChartContainer {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 2rem;
+}
+
+  #pieControls {
+    margin-top: 60px;
+  }
+
+  #categoryButtons {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    margin-bottom: 1rem;
+  }
+
+  #categoryButtons button {
+    background-color: #f0f0f0;
+    border: 1px solid #ccc;
+    padding: 0.5rem 1rem;
+    border-radius: 999px;
+    cursor: pointer;
+    font-size: 0.85rem;
+    transition: all 0.2s ease;
+  }
+
+  #categoryButtons button:hover {
+    background-color: #ddd;
+  }
+
+  #categoryButtons button.active {
+    background-color: #6a5acd;
+    color: white;
+    border-color: #6a5acd;
+  }

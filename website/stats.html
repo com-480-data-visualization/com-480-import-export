@@ -19,22 +19,41 @@
   <main class="container">
     <p>This graph represents the top 10 trade statistics based on user selection. Use the tabs below to switch between Import, Export, and Growth metrics. And I want to see if the text goes automaticaly to the line.</p>
     <section class="visualization">
-      <form>
-        <label><input type="radio" name="tradeType" value="exports" checked> Top Exported Products</label><br>
-        <label><input type="radio" name="tradeType" value="imports"> Top Imported Products</label><br>
-        <label><input type="radio" name="tradeType" value="import_years"> Highest Import Years</label><br>
-        <label><input type="radio" name="tradeType" value="export_years"> Highest Export Years</label><br>
-        <label><input type="radio" name="tradeType" value="abs_diff"> Products with Largest Abs Import-Export Diff</label><br>
-      </form>
+
 
       <div id="graph" style="margin-bottom: 60px; overflow-x: auto;">
         <h3>Top 10 Statistics</h3>
+          <form>
+            <label><input type="radio" name="tradeType" value="exports" checked> Top Exported Products</label><br>
+            <label><input type="radio" name="tradeType" value="imports"> Top Imported Products</label><br>
+            <label><input type="radio" name="tradeType" value="import_years"> Highest Import Years</label><br>
+            <label><input type="radio" name="tradeType" value="export_years"> Highest Export Years</label><br>
+            <label><input type="radio" name="tradeType" value="abs_diff"> Products with Largest Abs Import-Export Diff</label><br>
+          </form>
         <svg id="barChart" width="800" height="550" style="max-width: 100%;"></svg>
+        <p id="barDescription" style="margin-top: 1em; font-style: italic;"></p>
       </div>
 
       
     </section>
     <p>These statistics are based on dummy values and will be updated with real trade data. Each bar represents a distinct trade category and its corresponding value. </p>
+    
+    <section class="visualization">
+      <div id="pieControls">
+        <h3>Trade Pie Charts by Country</h3>
+        <div id="categoryButtons"></div>
+      </div>
+      <div id="pieChartContainer" style="display: flex; gap: 2rem;">
+        <div>
+          <h4 style="text-align: center;">Imports</h4>
+          <svg id="pieChart" width="400" height="400"></svg>
+        </div>
+        <div>
+          <h4 style="text-align: center;">Exports</h4>
+          <svg id="exportPieChart" width="400" height="400"></svg>
+        </div>
+      </div>
+    </section>
   </main>
 
   <footer>
