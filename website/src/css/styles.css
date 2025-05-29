@@ -1,7 +1,7 @@
 /* ==== Base Styles ==== */
 body, html {
     font-family: 'Segoe UI', Arial, sans-serif;
-    background-color: #f2f2f2; /* Slightly lighter, cleaner background */
+    background-color: #f2f2f2;
     margin: 0;
     padding: 0;
     height: 100%;
@@ -9,7 +9,7 @@ body, html {
   
   /* ==== Header ==== */
   header {
-    background: #ffffff; /* kept lighter theme for modern look */
+    background: #ffffff;
     padding: 1rem 2rem;
     display: flex;
     justify-content: space-between;
@@ -18,7 +18,7 @@ body, html {
     z-index: 10;
     position: relative;
     color: #222;
-    text-align: center; /* to satisfy older header styles */
+    text-align: center;
   }
   
   header h1 {
@@ -40,13 +40,12 @@ body, html {
   }
   
   /* ==== Layout Container ==== */
-
   .container {
   position: relative;
-  min-height: calc(100vh - 80px); 
+  min-height: calc(100vh - 80px);
   display: flex;
   flex-direction: column;
-  overflow: auto; 
+  overflow: auto;
   width: 80%;
   margin: auto;
 }
@@ -94,6 +93,7 @@ body, html {
   }
 
   /* ==== Trade Toggle Buttons ==== */
+  /*
   .trade-toggle-group {
     position: absolute;
     top: 100px;
@@ -130,7 +130,7 @@ body, html {
 
   .trade-toggle-group .trade-toggle:hover {
     background-color: #e0e0e0;
-  }
+  }*/
   /* ==== Map ==== */
   #map {
     flex: 1;
@@ -157,7 +157,8 @@ body, html {
   #productsFilter {
     top: 300px;
     left: 20px;
-    height: 200px;
+    height: 400px;
+
   }
   
   #dateFilter {
@@ -224,22 +225,63 @@ body, html {
     background: #ffffff;
     padding: 1rem 2rem;
     z-index: 1;
+    /*overflow: auto;*/
   }
-  
+
+  #graph {
+  height: 500px;
+  width: 100%;
+}
+  /*
   .chart, #graph {
     height: 100%;
     width: 100%;
     margin: 20px 0;
+    z-index: 2;
+    background: #f9f9f9;
   }
   
   /* ==== Footer ==== */
   footer {
     text-align: center;
-    font-size: 0.75rem; /* slightly smaller text */
-    padding: 0.1rem 0;  /* much thinner padding */
+    font-size: 0.75rem;
+    padding: 0.1rem 0;
     color: #666;
     background: #fafafa;
     border-top: 1px solid #ddd;
+  }
+
+  /* ==== Product Selector ==== */
+   #product-selector {
+    overflow-y: auto;
+    overflow-x: hidden;
+    height: 90%;
+    max-height: 90%;
+    width: 100%;
+    background: #fff;
+    border-radius: 0px;
+    border: 0px solid #eee;
+    padding: 0rem;
+    box-sizing: border-box;
+    flex: 1 1 auto;
+  }
+
+  #product-selector * {
+    box-sizing: border-box;
+    word-break: break-word;
+    max-width: 100%;
+  }
+
+  #product-selector div {
+    margin-bottom: 0.5rem;
+    text-transform: none;
+  }
+
+  #product-selector span {
+    text-transform: none;
+  }
+  #product-selector span::first-letter {
+    text-transform: uppercase;
   }
 
   /* ==== Mouse on the bins ==== */
@@ -289,3 +331,4 @@ body, html {
     color: white;
     border-color: #6a5acd;
   }
+

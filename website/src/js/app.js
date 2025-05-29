@@ -1,14 +1,18 @@
 // entry point for the app
 
 import { renderWorldMap } from './worldmap.js';
+import { initTradeTrend } from './tradeTrend.js';
+import { setupDateValidation } from './date.js';
 
 
-// const dataUrl = './dataset/OGD_LAND.csv';
 
 function loadData() {
     console.log("loadData called !!----");
 
     renderWorldMap();
+    console.log("World map rendered successfully");
+    initTradeTrend();
+    console.log("Trade trend initialized successfully");
 
     // d3.csv(dataUrl).then(data => {
     //     console.log("Data loaded successfully:", data);
@@ -22,6 +26,9 @@ function loadData() {
 function init() {
     console.log("init called");
     loadData();
+    console.log("Data loading initiated");
+    setupDateValidation();
+    console.log("Date validation setup completed");
 }
 
 document.addEventListener('DOMContentLoaded', init);

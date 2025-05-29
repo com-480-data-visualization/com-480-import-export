@@ -1,0 +1,181 @@
+ctry_id,ctry_isoc,ctry_d,ctry_f,ctry_i,ctry_e,valid_from,valid_to,map_name,map_code
+110,CH,Schweiz,Suisse,Svizzera,Switzerland,01.01.1988,31.12.2999,Switzerland,CH
+111,DE,Deutschland,Allemagne,Germania,Germany,01.01.1988,31.12.2999,Germany,DE
+112,FR,Frankreich,France,Francia,France,01.01.1988,31.12.2999,France,FR
+113,IT,Italien,Italie,Italia,Italy,01.01.1988,31.12.2999,Italy,IT
+114,NL,Niederlande,Pays-Bas,Paesi Bassi,Netherlands,01.01.1988,31.12.2999,Netherlands,NL
+115,BE,Belgien-Lux.,Belgique-Lux.,Belgio-Luss.,Belgium-Lux.,01.01.1988,31.12.1998,Belgium,BE
+116,BE,Belgien,Belgique,Belgio,Belgium,01.01.1999,31.12.2999,Belgium,BE
+117,LU,Luxemburg,Luxembourg,Lussemburgo,Luxembourg,01.01.1999,31.12.2999,Luxembourg,LU
+121,AT,Österreich,Autriche,Austria,Austria,01.01.1988,31.12.2999,Austria,AT
+122,GB,Ver. Königreich,Royaume-Uni,Regno Unito,United Kingdom,01.01.1988,31.12.2999,United Kingdom,GB
+123,DK,Dänemark,Danemark,Danimarca,Denmark,01.01.1988,31.12.2999,Denmark,DK
+124,NO,Norwegen,Norvège,Norvegia,Norway,01.01.1988,31.12.2999,Norway,NO
+125,SE,Schweden,Suède,Svezia,Sweden,01.01.1988,31.12.2999,Sweden,SE
+126,PT,Portugal,Portugal,Portogallo,Portugal,01.01.1988,31.12.2999,Portugal,PT
+127,FI,Finnland,Finlande,Finlandia,Finland,01.01.1988,31.12.2999,Finland,FI
+131,HR,Kroatien,Croatie,Croazia,Croatia,01.02.1992,31.12.2999,Croatia,HR
+132,SI,Slowenien,Slovénie,Slovenia,Slovenia,01.02.1992,31.12.2999,Slovenia,SI
+133,BA,Bosnien-Herzeg.,Bosnie-Herzég.,Bosnia Erzeg.,Bosnia-Herzeg.,01.05.1992,31.12.2999,Bosnia and Herz.,BA
+134,MK,Nordmazedonien,Macédoine Nord,Macedonia Nord,North Macedonia,01.05.1992,31.12.2999,North Macedonia,MK
+135,ME,Montenegro,Monténégro,Montenegro,Montenegro,01.01.2007,31.12.2999,Montenegro,ME
+135,ME,Montenegro,Monténégro,Montenegro,Montenegro,01.05.1992,31.12.1996,Montenegro,ME
+136,RS,Serbien,Serbie,Serbia,Serbia,01.01.2007,31.12.2999,Serbia,RS
+139,XK,Kosovo,Kosovo,Kosovo,Kosovo,01.01.2006,31.12.2999,Kosovo,XK
+141,IS,Island,Islande,Islanda,Iceland,01.01.1988,31.12.2999,Iceland,IS
+143,IE,Irland,Irlande,Irlanda,Ireland,01.01.1988,31.12.2999,Ireland,IE
+145,ES,Spanien,Espagne,Spagna,Spain,01.01.1988,31.12.2999,Spain,ES
+147,GR,Griechenland,Grèce,Grecia,Greece,01.01.1988,31.12.2999,Greece,GR
+149,TR,Türkiye,Türkiye,Türkiye,Türkiye,01.01.1988,31.12.2999,Turkey,TR
+153,PL,Polen,Pologne,Polonia,Poland,01.01.1988,31.12.2999,Poland,PL
+154,CZ,Tschechien,Tchéquie,Cechia,Czechia,01.01.1993,31.12.2999,Czechia,CZ
+156,SK,Slowakei,Slovaquie,Slovacchia,Slovakia,01.01.1993,31.12.2999,Slovakia,SK
+157,HU,Ungarn,Hongrie,Ungheria,Hungary,01.01.1988,31.12.2999,Hungary,HU
+159,AL,Albanien,Albanie,Albania,Albania,01.01.1988,31.12.2999,Albania,AL
+161,BG,Bulgarien,Bulgarie,Bulgaria,Bulgaria,01.01.1988,31.12.2999,Bulgaria,BG
+163,RO,Rumänien,Roumanie,Romania,Romania,01.01.1988,31.12.2999,Romania,RO
+169,CY,Zypern,Chypre,Cipro,Cyprus,01.01.1988,31.12.2999,Cyprus,CY
+181,EE,Estland,Estonie,Estonia,Estonia,01.01.1992,31.12.2999,Estonia,EE
+182,LV,Lettland,Lettonie,Lettonia,Latvia,01.01.1992,31.12.2999,Latvia,LV
+183,LT,Litauen,Lituanie,Lituania,Lithuania,01.01.1992,31.12.2999,Lithuania,LT
+184,RU,Russland,Russie,Russia,Russia,01.01.1992,31.12.2999,Russia,RU
+185,AM,Armenien,Arménie,Armenia,Armenia,01.01.1992,31.12.2999,Armenia,AM
+186,AZ,Aserbaidschan,Azerbaïdjan,Azerbaigian,Azerbaijan,01.01.1992,31.12.2999,Azerbaijan,AZ
+187,BY,Belarus,Bélarus,Belarus,Belarus,01.01.1992,31.12.2999,Belarus,BY
+188,GE,Georgien,Géorgie,Georgia,Georgia,01.01.1992,31.12.2999,Georgia,GE
+189,KZ,Kasachstan,Kazakhstan,Kazakstan,Kazakhstan,01.01.1992,31.12.2999,Kazakhstan,KZ
+190,KG,Kirgisistan,Kirghizstan,Kirghizistan,Kyrgyzstan,01.01.1992,31.12.2999,Kyrgyzstan,KG
+191,MD,Moldova,Moldova,Moldova,Moldova,01.01.1992,31.12.2999,Moldova,MD
+192,TJ,Tadschikistan,Tadjikistan,Tagikistan,Tajikistan,01.01.1992,31.12.2999,Tajikistan,TJ
+193,TM,Turkmenistan,Turkménistan,Turkmenistan,Turkmenistan,01.01.1992,31.12.2999,Turkmenistan,TM
+194,UA,Ukraine,Ukraine,Ucraina,Ukraine,01.01.1992,31.12.2999,Ukraine,UA
+195,UZ,Usbekistan,Ouzbékistan,Uzbekistan,Uzbekistan,01.01.1992,31.12.2999,Uzbekistan,UZ
+201,EG,Ägypten,Egypte,Egitto,Egypt,01.01.1988,31.12.2999,Egypt,EG
+203,SD,Sudan,Soudan,Sudan,Sudan,01.01.1988,31.12.2999,Sudan,SD
+204,SS,Südsudan,Soudan du Sud,Sud Sudan,South Sudan,01.09.2011,31.12.2999,S. Sudan,SS
+205,LY,Libyen,Libye,Libia,Libya,01.01.1988,31.12.2999,Libya,LY
+207,TN,Tunesien,Tunisie,Tunisia,Tunisia,01.01.1988,31.12.2999,Tunisia,TN
+209,DZ,Algerien,Algérie,Algeria,Algeria,01.01.1988,31.12.2999,Algeria,DZ
+211,MA,Marokko,Maroc,Marocco,Morocco,01.01.1988,31.12.2999,Morocco,MA
+212,EH,Westsahara,Sahara occid.,Sahara occid.,Western Sahara,01.01.1999,31.12.2999,W. Sahara,EH
+215,GQ,"Guinea, Äqua.-",Guinée équat.,Guinea equat.,"Guinea, Equat.",01.01.1988,31.12.2999,Eq. Guinea,GQ
+219,TG,Togo,Togo,Togo,Togo,01.01.1988,31.12.2999,Togo,TG
+221,SN,Senegal,Sénégal,Senegal,Senegal,01.01.1988,31.12.2999,Senegal,SN
+223,ML,Mali,Mali,Mali,Mali,01.01.1988,31.12.2999,Mali,ML
+225,MR,Mauretanien,Mauritanie,Mauritania,Mauritania,01.01.1988,31.12.2999,Mauritania,MR
+227,CI,Elfenbeinküste,Côte d'Ivoire,Costa d'Avorio,Côte d'Ivoire,01.01.1988,31.12.2999,Côte d'Ivoire,CI
+229,BF,Burkina Faso,Burkina,Burkina Faso,Burkina Faso,01.01.1988,31.12.2999,Burkina Faso,BF
+231,BJ,Benin,Bénin,Benin,Benin,01.01.1988,31.12.2999,Benin,BJ
+233,NE,Niger,Niger,Niger,Niger,01.01.1988,31.12.2999,Niger,NE
+235,GN,Guinea,Guinée,Guinea,Guinea,01.01.1988,31.12.2999,Guinea,GN
+237,GM,Gambia,Gambie,Gambia,Gambia,01.01.1988,31.12.2999,Gambia,GM
+239,SL,Sierra Leone,Sierra Leone,Sierra Leone,Sierra Leone,01.01.1988,31.12.2999,Sierra Leone,SL
+241,LR,Liberia,Libéria,Liberia,Liberia,01.01.1988,31.12.2999,Liberia,LR
+243,GH,Ghana,Ghana,Ghana,Ghana,01.01.1988,31.12.2999,Ghana,GH
+245,NG,Nigeria,Nigéria,Nigeria,Nigeria,01.01.1988,31.12.2999,Nigeria,NG
+247,CM,Kamerun,Cameroun,Camerun,Cameroon,01.01.1988,31.12.2999,Cameroon,CM
+249,GA,Gabun,Gabon,Gabon,Gabon,01.01.1988,31.12.2999,Gabon,GA
+251,CG,"Kongo, Republik","Congo, Rép. du","Congo, Rep. del","Congo, Rep. of",01.01.1988,31.12.2999,Congo,CG
+253,CF,Zentralafrika,Centrafrique,Centrafrica,Central Africa,01.01.1988,31.12.2999,Central African Rep.,CF
+255,TD,Tschad,Tchad,Ciad,Chad,01.01.1988,31.12.2999,Chad,TD
+256,CD,Kongo (RDK),Congo (RDC),Congo (RDC),Congo (RDC),01.06.1997,31.12.2999,Dem. Rep. Congo,CD
+258,AO,Angola,Angola,Angola,Angola,01.01.1988,31.12.2999,Angola,AO
+260,GW,Guinea-Bissau,Guinée-Bissau,Guinea-Bissau,Guinea-Bissau,01.01.1988,31.12.2999,Guinea-Bissau,GW
+261,BW,Botsuana,Botswana,Botswana,Botswana,01.01.1988,31.12.2999,Botswana,BW
+263,LS,Lesotho,Lesotho,Lesotho,Lesotho,01.01.1988,31.12.2999,Lesotho,LS
+265,NA,Namibia,Namibie,Namibia,Namibia,01.01.1988,31.12.2999,Namibia,NA
+267,ZA,Südafrika,Afrique du Sud,Sud Africa,South Africa,01.01.1988,31.12.2999,South Africa,ZA
+269,SZ,Eswatini,Eswatini,Eswatini,Eswatini,01.09.2018,31.12.2999,eSwatini,SZ
+269,SZ,Swasiland,Swaziland,Swaziland,Swaziland,01.01.1988,31.08.2018,eSwatini,SZ
+271,ZM,Sambia,Zambie,Zambia,Zambia,01.01.1988,31.12.2999,Zambia,ZM
+272,ZW,Simbabwe,Zimbabwe,Zimbabwe,Zimbabwe,01.01.1988,31.12.2999,Zimbabwe,ZW
+273,MW,Malawi,Malawi,Malawi,Malawi,01.01.1988,31.12.2999,Malawi,MW
+275,MZ,Mosambik,Mozambique,Mozambico,Mozambique,01.01.1988,31.12.2999,Mozambique,MZ
+277,MG,Madagaskar,Madagascar,Madagascar,Madagascar,01.01.1988,31.12.2999,Madagascar,MG
+282,AQ,Antarktis,Antarctique,Antartide,Antarctica,01.01.1988,31.12.2999,Antarctica,AQ
+285,TZ,Tansania,Tanzanie,Tanzania,Tanzania,01.01.1988,31.12.2999,Tanzania,TZ
+287,RW,Ruanda,Rwanda,Ruanda,Rwanda,01.01.1988,31.12.2999,Rwanda,RW
+289,BI,Burundi,Burundi,Burundi,Burundi,01.01.1988,31.12.2999,Burundi,BI
+291,SO,Somalia,Somalie,Somalia,Somalia,01.01.1988,31.12.2999,Somalia,SO
+291,SO,Somalia,Somalie,Somalia,Somalia,01.01.1988,31.12.2999,Somaliland,SO
+292,TF,Franz. Südgeb.,Terres aus. fr.,Ter. austr. fr.,Fr. Southern T.,01.01.1999,31.12.2999,Fr. S. Antarctic Lands,TF
+293,DJ,Dschibuti,Djibouti,Gibuti,Djibouti,01.01.1988,31.12.2999,Djibouti,DJ
+294,ER,Eritrea,Erythrée,Eritrea,Eritrea,01.01.1994,31.12.2999,Eritrea,ER
+295,ET,Äthiopien,Ethiopie,Etiopia,Ethiopia,01.01.1988,31.12.2999,Ethiopia,ET
+296,KE,Kenia,Kenya,Kenia,Kenya,01.01.1988,31.12.2999,Kenya,KE
+297,UG,Uganda,Ouganda,Uganda,Uganda,01.01.1988,31.12.2999,Uganda,UG
+301,SY,Syrien,Syrie,Siria,Syria,01.01.1988,31.12.2999,Syria,SY
+303,LB,Libanon,Liban,Libano,Lebanon,01.01.1988,31.12.2999,Lebanon,LB
+305,IL,Israel,Israël,Israele,Israel,01.01.1988,31.12.2999,Israel,IL
+306,PS,Palästina,Palestine,Palestina,Palestine,01.01.1997,31.12.2999,Palestine,PS
+307,JO,Jordanien,Jordanie,Giordania,Jordan,01.01.1988,31.12.2999,Jordan,JO
+311,SA,Saudi-Arabien,Arabie saoudite,Arabia Saudita,Saudi Arabia,01.01.1988,31.12.2999,Saudi Arabia,SA
+315,YE,Jemen (Nord),Yémen (Nord),Yemen (Nord),Yemen (Nord),01.01.1988,31.12.1990,Yemen,YE
+316,YE,Jemen,Yémen,Yemen,Yemen,01.01.1991,31.12.2999,Yemen,YE
+321,QA,Katar,Qatar,Qatar,Qatar,01.01.1988,31.12.2999,Qatar,QA
+324,AE,"Emirate, Arab.",Emirats arabes,Emirati Arabi,"Emirates, Arab",01.01.1988,31.12.2999,United Arab Emirates,AE
+325,OM,Oman,Oman,Oman,Oman,01.01.1988,31.12.2999,Oman,OM
+327,KW,Kuwait,Koweït,Kuwait,Kuwait,01.01.1988,31.12.2999,Kuwait,KW
+329,IQ,Irak,Irak,Iraq,Iraq,01.01.1988,31.12.2999,Iraq,IQ
+331,IR,Iran,Iran,Iran,Iran,01.01.1988,31.12.2999,Iran,IR
+333,AF,Afghanistan,Afghanistan,Afganistan,Afghanistan,01.01.1988,31.12.2999,Afghanistan,AF
+335,PK,Pakistan,Pakistan,Pakistan,Pakistan,01.01.1988,31.12.2999,Pakistan,PK
+337,BD,Bangladesch,Bangladesh,Bangladesh,Bangladesh,01.01.1988,31.12.2999,Bangladesh,BD
+339,IN,Indien,Inde,India,India,01.01.1988,31.12.2999,India,IN
+343,LK,Sri Lanka,Sri Lanka,Sri Lanka,Sri Lanka,01.01.1988,31.12.2999,Sri Lanka,LK
+345,NP,Nepal,Népal,Nepal,Nepal,01.01.1988,31.12.2999,Nepal,NP
+346,BT,Bhutan,Bhoutan,Bhutan,Bhutan,01.01.1988,31.12.2999,Bhutan,BT
+351,MM,Myanmar,Myanmar,Myanmar,Myanmar,01.01.1988,31.12.2999,Myanmar,MM
+353,TH,Thailand,Thaïlande,Thailandia,Thailand,01.01.1988,31.12.2999,Thailand,TH
+355,MY,Malaysia,Malaisie,Malaysia,Malaysia,01.01.1988,31.12.2999,Malaysia,MY
+357,BN,Brunei,Brunéi,Brunei,Brunei,01.01.1988,31.12.2999,Brunei,BN
+363,KH,Kambodscha,Cambodge,Cambogia,Cambodia,01.01.1988,31.12.2999,Cambodia,KH
+365,LA,Laos,Laos,Laos,Laos,01.01.1988,31.12.2999,Laos,LA
+368,VN,Vietnam,Viet Nam,Viet Nam,Viet Nam,01.01.1988,31.12.2999,Vietnam,VN
+371,MN,Mongolei,Mongolie,Mongolia,Mongolia,01.01.1988,31.12.2999,Mongolia,MN
+373,CN,China,Chine,Cina,China,01.01.1988,31.12.2999,China,CN
+377,TW,Taiwan,Taïwan,Taiwan,Taiwan,01.01.1988,31.12.2999,Taiwan,TW
+383,KP,Korea (Nord),Corée (Nord),Corea (Nord),Korea (North),01.01.1988,31.12.2999,North Korea,KP
+385,KR,Korea (Süd),Corée (Sud),Corea (Sud),Korea (South),01.01.1988,31.12.2999,South Korea,KR
+387,JP,Japan,Japon,Giappone,Japan,01.01.1988,31.12.2999,Japan,JP
+389,PH,Philippinen,Philippines,Filippine,Philippines,01.01.1988,31.12.2999,Philippines,PH
+391,ID,Indonesien,Indonésie,Indonesia,Indonesia,01.01.1988,31.12.2999,Indonesia,ID
+392,TL,Timor-Leste,Timor-Oriental,Timor-Leste,Timor-Leste,01.01.2004,31.12.2999,Timor-Leste,TL
+401,CA,Kanada,Canada,Canada,Canada,01.01.1988,31.12.2999,Canada,CA
+403,US,USA,USA,USA,USA,01.01.1988,31.12.2999,United States of America,US
+404,GL,Grönland,Groenland,Groenlandia,Greenland,01.01.1988,31.12.2999,Greenland,GL
+405,MX,Mexiko,Mexique,Messico,Mexico,01.01.1988,31.12.2999,Mexico,MX
+407,BZ,Belize,Belize,Belize,Belize,01.01.1988,31.12.2999,Belize,BZ
+409,GT,Guatemala,Guatemala,Guatemala,Guatemala,01.01.1988,31.12.2999,Guatemala,GT
+411,HN,Honduras,Honduras,Honduras,Honduras,01.01.1988,31.12.2999,Honduras,HN
+413,SV,El Salvador,El Salvador,El Salvador,El Salvador,01.01.1988,31.12.2999,El Salvador,SV
+415,NI,Nicaragua,Nicaragua,Nicaragua,Nicaragua,01.01.1988,31.12.2999,Nicaragua,NI
+417,CR,Costa Rica,Costa Rica,Costa Rica,Costa Rica,01.01.1988,31.12.2999,Costa Rica,CR
+419,PA,Panama,Panama,Panama,Panama,01.01.1988,31.12.2999,Panama,PA
+423,BS,Bahamas,Bahamas,Bahamas,Bahamas,01.01.1988,31.12.2999,Bahamas,BS
+425,JM,Jamaika,Jamaïque,Giamaica,Jamaica,01.01.1988,31.12.2999,Jamaica,JM
+427,CU,Kuba,Cuba,Cuba,Cuba,01.01.1988,31.12.2999,Cuba,CU
+429,HT,Haiti,Haïti,Haiti,Haiti,01.01.1988,31.12.2999,Haiti,HT
+431,DO,Dominik. Rep.,"Dominicaine, R.","Dominicana, R.",Dominican Rep.,01.01.1988,31.12.2999,Dominican Rep.,DO
+433,PR,Puerto Rico,Porto Rico,Portorico,Puerto Rico,01.01.1988,31.12.2005,Puerto Rico,PR
+447,TT,Trinidad,Trinité,Trinidad,Trinidad,01.01.1988,31.12.2999,Trinidad and Tobago,TT
+455,CO,Kolumbien,Colombie,Colombia,Colombia,01.01.1988,31.12.2999,Colombia,CO
+457,VE,Venezuela,Venezuela,Venezuela,Venezuela,01.01.1988,31.12.2999,Venezuela,VE
+459,GY,Guyana,Guyana,Guyana,Guyana,01.01.1988,31.12.2999,Guyana,GY
+461,SR,Suriname,Suriname,Suriname,Suriname,01.01.1988,31.12.2999,Suriname,SR
+465,BR,Brasilien,Brésil,Brasile,Brazil,01.01.1988,31.12.2999,Brazil,BR
+471,PY,Paraguay,Paraguay,Paraguay,Paraguay,01.01.1988,31.12.2999,Paraguay,PY
+473,UY,Uruguay,Uruguay,Uruguay,Uruguay,01.01.1988,31.12.2999,Uruguay,UY
+475,AR,Argentinien,Argentine,Argentina,Argentina,01.01.1988,31.12.2999,Argentina,AR
+476,FK,Falkland,Falkland,Falkland,Falkland,01.01.1988,31.12.2999,Falkland Is.,FK
+479,CL,Chile,Chili,Cile,Chile,01.01.1988,31.12.2999,Chile,CL
+481,BO,Bolivien,Bolivie,Bolivia,Bolivia,01.01.1988,31.12.2999,Bolivia,BO
+483,PE,Peru,Pérou,Perù,Peru,01.01.1988,31.12.2999,Peru,PE
+485,EC,Ecuador,Equateur,Ecuador,Ecuador,01.01.1988,31.12.2999,Ecuador,EC
+501,AU,Australien,Australie,Australia,Australia,01.01.1988,31.12.2999,Australia,AU
+503,PG,Papua,Papouasie,Papua,Papua,01.01.1988,31.12.2999,Papua New Guinea,PG
+509,NZ,Neuseeland,Nouv.-Zélande,Nuova Zelanda,New Zealand,01.01.1988,31.12.2999,New Zealand,NZ
+519,SB,Salomonen,"Salomon, Îles","Salomone, Isole",Solomon Islands,01.01.1988,31.12.2999,Solomon Is.,SB
+526,NC,Neukaledonien,Nouv.-Calédonie,Nuova Caledonia,New Caledonia,01.01.1999,31.12.2999,New Caledonia,NC
+539,FJ,Fidschi,Fidji,Figi,Fiji,01.01.1988,31.12.2999,Fiji,FJ
+543,VU,Vanuatu,Vanuatu,Vanuatu,Vanuatu,01.01.1988,31.12.2999,Vanuatu,VU
