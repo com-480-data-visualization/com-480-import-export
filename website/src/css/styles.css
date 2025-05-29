@@ -41,21 +41,21 @@ body, html {
   
   /* ==== Layout Container ==== */
   .container {
-  position: relative;
-  min-height: calc(100vh - 80px);
-  display: flex;
-  flex-direction: column;
-  overflow: auto;
-  width: 80%;
-  margin: auto;
-}
+    position: relative;
+    min-height: calc(100vh - 80px);
+    display: flex;
+    flex-direction: column;
+    overflow: auto;
+    width: 80%;
+    margin: auto;
+  }
   
   /* ==== Trade Tabs ==== */
   .trade-tab-group {
-    position: absolute;
-    top: 100px;
-    left: 20px;
-    background-color: white;
+    /* position: absolute; */
+    /* top: 100px; */
+    /* left: 20px; */
+    background-color: pink;
     border-radius: 12px;
     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
     padding: 0.5rem 1rem;
@@ -136,39 +136,70 @@ body, html {
     flex: 1;
     height: 100%;
     width: 100%;
+    margin-left: 4rem;
   }
   
   /* ==== Overlay Filters ==== */
   .overlay-box {
-    position: absolute;
-    background: rgba(255, 255, 255, 0.95);
+    /* position: absolute; */
+    background: rgba(124, 240, 255, 0.95);
     border-radius: 12px;
-    padding: 1rem;
+    padding: 0.5rem;
     width: 180px;
-    z-index: 5;
+    /* z-index: 5; */
   }
   
   #countriesFilter {
-    top: 150px;
-    left: 20px;
     height: 100px;
+    width: auto;
   }
   
   #productsFilter {
-    top: 300px;
-    left: 20px;
+    /* top: 300px; */
+    /* left: 20px; */
     height: 400px;
-
+    width: auto;
   }
   
   #dateFilter {
-    top: 100px;
-    right: 20px;
-    width: 150px;
+    display: flex;
+    flex-direction: column;
+    column-gap: 1rem;
+    row-gap: 0.2rem;
+    align-items: flex-start;
+    width: auto;
+  }
+  
+  #dateFilter .date-row {
+    margin-left: 0.5rem;
+    margin-right: 0.5rem;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    width: 100%;
+  }
+  
+  #dateFilter .date-row label {
+    font-size: 0.85rem;
+    color: #555;
+    margin: 0;
+    flex: 0 0 3rem;       /* fixed width for all labels */
+    text-align: left;
+  }
+  
+  #dateFilter .date-row input[type="month"] {
+    width: 160px;
+    padding: 0.4rem;
+    margin: 0;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    flex: none;
+    font: inherit;
+    /* align-items: right; */
   }
   
   .overlay-box h3 {
-    margin-bottom: 0.5rem;
+    margin: 0.5rem;
     font-size: 1rem;
     color: #333;
   }
@@ -188,12 +219,7 @@ body, html {
     border-radius: 6px;
   }
   
-  #dateFilter label {
-    font-size: 0.85rem;
-    color: #555;
-    margin-top: 0.5rem;
-    display: block;
-  }
+  
   
   /* ==== Buttons ==== */
   button {
@@ -259,25 +285,71 @@ body, html {
     border-top: 1px solid #ddd;
   }
 
+  /* ==== Sidebar Form ==== */
+  #sidebar {
+    position: absolute;
+    top: 60px;
+    left: 0px;
+    width: 400px;
+    height: auto;
+    background: #f8f8f8;
+    box-shadow: 2px 0 5px rgba(0,0,0,0.2);
+    padding: 15px;
+    box-sizing: border-box;
+    transition: left 0.3s ease;
+    overflow-y: auto;
+    z-index: 30;
+  }
+  /* #sidebar.open { left: 0; } */
+  #sidebar h2 { 
+    margin-top: 0; 
+  }
+
+  /* .toggle-btn {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    background: #fff;
+    border: 1px solid #ccc;
+    padding: 8px 12px;
+    cursor: pointer;
+    z-index: 20;
+  }
+  .close-btn {
+    background: none;
+    border: none;
+    font-size: 18px;
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    cursor: pointer;
+    background: pink;
+  } */
+  form section { margin-bottom: 15px; }
+  form label { display: block; margin-bottom: 5px; }
+
   /* ==== Product Selector ==== */
    #product-selector {
     overflow-y: auto;
     overflow-x: hidden;
     height: 90%;
     max-height: 90%;
-    width: 100%;
+    /* width: 100%; */
+    width: auto;
     background: #fff;
     border-radius: 0px;
     border: 0px solid #eee;
     padding: 0rem;
     box-sizing: border-box;
     flex: 1 1 auto;
+    margin-left: 0.5rem;
+    margin-right: 0.5rem;
   }
 
   #product-selector * {
     box-sizing: border-box;
     word-break: break-word;
-    max-width: 100%;
+    /* max-width: 100%; */
   }
 
   #product-selector div {

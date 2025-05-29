@@ -136,8 +136,8 @@ function buildTree(data, depth = 0, path = []) {
 function renderTree() {
   const root = document.getElementById('product-selector');
   root.innerHTML = '';
-  if (productData) {
-    root.appendChild(buildTree(productData));
+  if (productData?.tab) {
+    root.appendChild(buildTree(productData.tab));
   }
 }
 
@@ -149,7 +149,7 @@ function setupLogButton() {
 
 function init() {
   renderTree();
-  //setupLogButton();
+  setupLogButton();
 }
 
 window.initProductList = init;

@@ -11,6 +11,8 @@ export async function showDropDown(countries, onSelectCountry) {
     }));
     console.log(countryOptions);
 
+    const countryOptionsSorted = countryOptions.sort((a, b) => a.map_name.localeCompare(b.map_name));
+    // console.log('Sorted Country Options:', countryOptionsSorted);
     
     dropdown.selectAll('option')
         .data(countryOptions)
@@ -24,7 +26,7 @@ export async function showDropDown(countries, onSelectCountry) {
         const selected_country = this.value;
         console.log('Selected country:', selected_country);
 
-        const selectedCountryData = countryOptions.find(d => d.map_name === selected_country);
+        const selectedCountryData = countryOptionsSorted.find(d => d.map_name === selected_country);
         if (selectedCountryData) {
             console.log('Corresponding ctry_id:', selectedCountryData.ctry_id);
 

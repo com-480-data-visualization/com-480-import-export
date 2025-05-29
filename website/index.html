@@ -16,42 +16,62 @@
     </nav>
   </header>
 
-  <!-- selection of the trade type -->
-  <div id="tradeTypeFilter" class="trade-tab-group">
-    <input type="radio" id="tab-import" name="tradeType" value="import" checked>
-    <label for="tab-import" class="trade-tab">Import</label>
-  
-    <input type="radio" id="tab-export" name="tradeType" value="export">
-    <label for="tab-export" class="trade-tab">Export</label>
-  
-    <input type="radio" id="tab-both" name="tradeType" value="both">
-    <label for="tab-both" class="trade-tab">Both</label>
-  </div>
+  <!-- <button class="toggle-btn">☰ Filters</button> -->
+  <div id="sidebar">
+    <!-- <button class="close-btn">✖</button> -->
+    <h2>Filters</h2>
+    <form id="filter-form">
 
-  <!-- filter boxes of country and product and years -->
-  <div id="countriesFilter" class="overlay-box">
-    <h3>Countries</h3>
-    <div id="countryList" class="checkbox-list">
+      <section>
+        <div id="tradeTypeFilter" class="trade-tab-group">
+          <input type="radio" id="tab-import" name="tradeType" value="import" checked>
+          <label for="tab-import" class="trade-tab">Import</label>
+          <input type="radio" id="tab-export" name="tradeType" value="export">
+          <label for="tab-export" class="trade-tab">Export</label>
+          <input type="radio" id="tab-both" name="tradeType" value="both">
+          <label for="tab-both" class="trade-tab">Both</label>
+        </div>
+      </section>
 
-      <select id="countries-dropdown">
-        <option value="">Select a country</option>
-      </select>
-    </div>
-  </div>
+      <section>
+        <div id="countriesFilter" class="overlay-box">
+          <h3>Countries</h3>
+          <div id="countryList" class="checkbox-list">
+            <select id="countries-dropdown">
+              <option value="">Select a country</option>
+            </select>
+          </div>
+        </div>
+      </section>
 
-  <div id="productsFilter" class="overlay-box">
-    <h3>Products</h3>
-    <div id="product-selector"></div>
-    <!--<button id="log-selection" type="button">Log Selected Product</button> -->
-  </div>
+      <section>
+        <div id="dateFilter" class="overlay-box">
+          <h3>Choose Period</h3>
+          <div class="date-row">
+            <label for="startDate">Start</label>
+            <input type="month" id="startDate" placeholder="mm.yyyy">
+          </div>
+        
+          <div class="date-row">
+            <label for="endDate">End</label>
+            <input type="month" id="endDate" placeholder="mm.yyyy">
+          </div>
+        </div>
+      </section>
 
-  <div id="dateFilter" class="overlay-box">
-    <h3>Choose Period</h3>
-    <label for="startDate">Start</label>
-    <input type="text" id="startDate" placeholder="mm.yyyy">
-  
-    <label for="endDate">End</label>
-    <input type="text" id="endDate" placeholder="mm.yyyy">
+      <section>
+        <div id="productsFilter" class="overlay-box">
+          <h3>Products</h3>
+          <div id="product-selector"></div>
+          <button id="log-selection" type="button">Log Selected Product</button>
+        </div>
+      </section>
+      <!-- Submit and Reset -->
+      <section>
+        <button type="submit">Apply</button>
+        <button type="reset">Reset</button>
+      </section>
+    </form>
   </div>
 
   <main class="container">

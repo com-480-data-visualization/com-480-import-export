@@ -2,8 +2,8 @@ import { showDropDown } from './countries_dropdown.js';
 
 
 
-const svgWidth = 1400;
-const svgHeight = 700;
+const svgWidth = 1500;
+const svgHeight = 750;
 
 const projection = d3.geoMercator()
     .scale(200)
@@ -35,13 +35,20 @@ export function renderWorldMap() {
 }
 
 function highlight_country(country_data) {
-    
-    svg.selectAll('.country')
-        .attr('fill', '#e0e0e0');
+    // console.log("highlight_country called with:", country_data);
 
-    svg.selectAll('.country')
+    if(country_data.properties.name === 'Switzerland') {
+        svg.selectAll('.country')
         .filter(d => d.properties.name === country_data.properties.name)
-        .attr('fill', 'orange');
+        .attr('fill', 'red');
+    } else {
+        // svg.selectAll('.country')
+        //     .attr('fill', '#e0e0e0');
+
+        svg.selectAll('.country')
+            .filter(d => d.properties.name === country_data.properties.name)
+            .attr('fill', 'orange');
+    }
 }
 
 function draw_countries(countries) {
@@ -63,6 +70,8 @@ function draw_countries(countries) {
             drawTradeLine(switzerlandCoords, countryCenter, countryName);
             highlight_country({properties: { name: countryName }});
         });
+    
+    highlight_country({properties: { name: 'Switzerland' }});
 }
 
 function drawTradeLine(StartCoordinates, EndCoordinates, label) {
