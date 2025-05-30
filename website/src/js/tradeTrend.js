@@ -29,9 +29,11 @@ export function aggregateYearlyTotals(data) {
 export function renderTradeTrend(containerSelector, data, startDate, endDate) {
     // ---- 1) SETUP & FLATTEN ----
     d3.select(containerSelector).select("svg").remove();
-    const width  = 1080,
-          height = 300,
-          margin = { top: 20, right: 30, bottom: 50, left: 60 };
+
+    const containerWidth = document.querySelector('#map').clientWidth / 3 * 2;
+    // console.log(containerWidth);
+    const height = 300;
+    const margin = { top: 20, right: 30, bottom: 50, left: 60 };
   
     // make sure every item’s date is a Date:
     data.forEach(s => s.values.forEach(d => d.date = new Date(d.date)));
@@ -96,7 +98,7 @@ export function renderTradeTrend(containerSelector, data, startDate, endDate) {
     // ---- 4) SCALES & LINE ----
     const x = d3.scaleTime()
         .domain([start, end])
-        .range([margin.left, width - margin.right]);
+        .range([margin.left, containerWidth - margin.right]);
 
     const allValues = plotData.flatMap(s => s.values.map(d => d.chf));
     const y = d3.scaleLinear()
@@ -112,7 +114,7 @@ export function renderTradeTrend(containerSelector, data, startDate, endDate) {
 
     const svg = d3.select(containerSelector)
       .append("svg")
-        .attr("width",  width)
+        .attr("width",  containerWidth)
         .attr("height", height);
   
     // draw each series
@@ -154,7 +156,7 @@ export function renderTradeTrend(containerSelector, data, startDate, endDate) {
     const legend = svg.append("g")
         .attr("class", "legend")
         .attr("transform",
-              `translate(${width - margin.right - 150},${margin.top})`);
+              `translate(${containerWidth - margin.right - 150},${margin.top})`);
   
     plotData.forEach((series, i) => {
       const g = legend.append("g")
