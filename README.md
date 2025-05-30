@@ -8,6 +8,8 @@
 
 [Milestone 1](#milestone-1-21st-march-5pm) • [Milestone 2](#milestone-2-18th-april-5pm) • [Milestone 3](#milestone-3-30th-may-5pm)
 
+Our website is [here](https://com-480-data-visualization.github.io/com-480-import-export/)
+
 ## Milestone 1 (21st March, 5pm)
 
 ## Instructions
@@ -74,6 +76,9 @@ View our [Milestone 2 PDF Report](milestone2/com_480_ms2.pdf) and the early vers
 ## Milestone 3 (30th May, 5pm)
 
 **80% of the final grade**
+
+Our screencast can be found [here](milestone3/screencast.mov)
+Our process book can be found [here](milestone3/com_480_ms3.pdf)
 
 ### Technical Setup and Intended Usage
 
