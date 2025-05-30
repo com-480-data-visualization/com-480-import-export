@@ -1,4 +1,4 @@
-import { getSelectedPaths } from './product_list.js';
+import { getSelectedPaths, lookupText } from './product_list.js';
 // --- Aggregation ---
 export function aggregateYearlyTotals(data) {
     const groupedData = {};
@@ -19,7 +19,7 @@ export function aggregateYearlyTotals(data) {
     return Object.entries(groupedData).map(([key, values]) => {
         const [ctry_id, tn_num] = key.split('-');
         return {
-            name: `Country: ${ctry_id}, Trade Number: ${tn_num}`,
+            name: `${ctry_id} - TN: ${tn_num}`,
             values: values.sort((a, b) => a.date - b.date) // Sort by date
         };
     });
@@ -174,9 +174,35 @@ export function renderTradeTrend(containerSelector, data, startDate, endDate) {
 // --- Toggle Logic and Initialization ---
 
 export function initTradeTrend() {
-    function renderCurrentTrend(startDate, endDate, data) {
-        console.log("Rendering trade trend data", data);
-        renderTradeTrend("#graph", aggregateYearlyTotals(data), startDate, endDate);
+    function renderCurrentTrend(startDate, endDate, fetchedDataOrAll, selectedTnNum) {
+        console.log("Rendering trade trend data", fetchedDataOrAll, selectedTnNum);
+
+        let seriesArray;
+        if (Array.isArray(fetchedDataOrAll)) {
+          // old behavior: a flat array of records
+          console.log("Old data format detected, aggregating yearly totals.");
+          seriesArray = aggregateYearlyTotals(fetchedDataOrAll);
+        } else {
+          // new behavior: an object of the form { prefix: { import: […], export: […] }, … }
+          seriesArray = Object.entries(fetchedDataOrAll)
+            .flatMap(([prefix, dirs]) =>
+              // for each prefix, build one series for import and one for export
+              ["Import", "Export"]
+                .filter(dir => Array.isArray(dirs[dir]) && dirs[dir].length > 0)
+                .map(dir => ({
+                  name:      `${dir} of ${lookupText(selectedTnNum[prefix])} `,
+                  values:    dirs[dir].map(item => ({
+                               date: new Date(item.date),
+                               chf:  item.chf
+                             }))
+                }))
+            );
+        }
+
+        console.log("Series Array:", seriesArray);
+        renderTradeTrend("#graph", seriesArray, startDate, endDate);
+
+        // renderTradeTrend("#graph", aggregateYearlyTotals(data), startDate, endDate);
     }
 
     async function setupLoadDataButton() {
@@ -197,10 +223,10 @@ export function initTradeTrend() {
                 }
 
                 // const tnNum = '3004.1000' // document.getElementById('tnFilter').value; // Trade number
-                let selectedTnNum = [];
+                let selectedTnNum = {};
                 getSelectedPaths().forEach(path => {
                   console.log(path)
-                  selectedTnNum.push(path.at(-1)); // push last element
+                  selectedTnNum[path.at(-1)] = path; // push last element
                 });
                 
                 console.log("Trade Type Filter:", tradeTypeFilter, "Start Date:", startDate, "End Date:", endDate, "Country ID:", ctryId, "Trade Numbers:", selectedTnNum);
@@ -208,21 +234,21 @@ export function initTradeTrend() {
                 const endYear = endDate.split('-')[0]; // Extract year
                 let fetchedDataAll = {};
                 
-                for (let tnNum of selectedTnNum) {
+                for (let tnNum of Object.keys(selectedTnNum)) {
                     fetchedDataAll[tnNum] = {}; // Initialize an array for each TN number
                     console.log("Fetching data for TN Number:", tnNum);
                     if (tradeTypeFilter === 'import') {
                       let fetchedData = await fetchImportData(startYear, endYear, ctryId, tnNum);
                       console.log("Fetched Import Data:", tnNum, fetchedData);
-                      fetchedDataAll[tnNum] = {"import": fetchedData}; // Store data for each TN number
+                      fetchedDataAll[tnNum] = {"Import": fetchedData}; // Store data for each TN number
                     } else if (tradeTypeFilter === 'export') {
                         let fetchedData = await fetchExportData(startYear, endYear, ctryId, tnNum);
                         console.log("Fetched Export Data:", tnNum, fetchedData);
-                        fetchedDataAll[tnNum] = {"export": fetchedData}; // Store data for each TN number
+                        fetchedDataAll[tnNum] = {"Export": fetchedData}; // Store data for each TN number
                     } else if (tradeTypeFilter === 'both') {
                         const importData = await fetchImportData(startYear, endYear, ctryId, tnNum);
                         const exportData = await fetchExportData(startYear, endYear, ctryId, tnNum);
-                        fetchedDataAll[tnNum] = {"export": exportData, "import": importData};
+                        fetchedDataAll[tnNum] = {"Export": exportData, "Import": importData};
                     }
                     console.log("All", fetchedDataAll)
                     console.log(Object.keys(fetchedDataAll).length, "Trade Numbers fetched");
@@ -233,7 +259,7 @@ export function initTradeTrend() {
                     console.log(hasAny); // true
 
                     if (hasAny) {
-                        renderCurrentTrend(startDate, endDate, fetchedDataAll);
+                        renderCurrentTrend(startDate, endDate, fetchedDataAll, selectedTnNum);
                     } else {
                         alert("No data found for the selected filters.");
                     }

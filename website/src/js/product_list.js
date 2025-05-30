@@ -147,6 +147,11 @@ function setupLogButton() {
   };
 }
 
+export function lookupText(path) {
+  const node = findNode(productData, path);
+  return node?.text ?? null;
+}
+
 function init() {
   renderTree();
   // setupLogButton();
