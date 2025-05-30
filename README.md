@@ -77,7 +77,7 @@ View our [Milestone 2 PDF Report](milestone2/com_480_ms2.pdf) and the early vers
 
 **80% of the final grade**
 
-Our screencast can be found [here](milestone3/screencast.mov) and our process book can be found [here](milestone3/com_480_ms3.pdf)
+Our screencast can be found [here](milestone3/screencast.mp4) and our process book can be found [here](milestone3/com_480_ms3.pdf)
 
 ### Technical Setup and Intended Usage
 
