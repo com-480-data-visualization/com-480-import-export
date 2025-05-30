@@ -42,8 +42,8 @@ function highlight_country(country_data) {
         .filter(d => d.properties.name === country_data.properties.name)
         .attr('fill', 'red');
     } else {
-        // svg.selectAll('.country')
-        //     .attr('fill', '#e0e0e0');
+        svg.selectAll('.country')
+            .attr('fill', '#e0e0e0');
 
         svg.selectAll('.country')
             .filter(d => d.properties.name === country_data.properties.name)
@@ -67,9 +67,12 @@ function highlight_country(country_data) {
     }
 }
 
-function reset_map() {
+export function reset_map() {
     svg.selectAll('.country')
         .attr('fill', '#e0e0e0');
+    svg.selectAll('.trade-line').remove();
+    svg.selectAll('.trade-label').remove();
+    highlight_country({properties: { name: 'Switzerland' }});
 }
 
 function draw_countries(countries) {
@@ -90,6 +93,7 @@ function draw_countries(countries) {
             console.log(`Clicked: ${countryName}`);
             drawTradeLine(switzerlandCoords, countryCenter, countryName);
             highlight_country({properties: { name: countryName }});
+            highlight_country({properties: { name: 'Switzerland' }});
         });
     
     highlight_country({properties: { name: 'Switzerland' }});
@@ -97,8 +101,8 @@ function draw_countries(countries) {
 
 function drawTradeLine(StartCoordinates, EndCoordinates, label) {
     // Remove existing trade lines and labels if needed
-    // svg.selectAll('.trade-line').remove();
-    // svg.selectAll('.trade-label').remove();
+    svg.selectAll('.trade-line').remove();
+    svg.selectAll('.trade-label').remove();
 
     const [x1, y1] = projection(StartCoordinates);
     const [x2, y2] = projection(EndCoordinates);

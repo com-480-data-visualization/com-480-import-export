@@ -46,10 +46,10 @@ body, html {
   /* ==== Layout Container ==== */
   .container {
     position: relative;
-    min-height: calc(100vh - 80px);
+    /* min-height: calc(100vh - 80px); */
     display: flex;
     flex-direction: column;
-    overflow: auto;
+    /* overflow: hidden; */
     width: 80%;
     margin: auto;
   }
@@ -145,6 +145,7 @@ body, html {
     height: 100%;
     width: 100%;
     margin-left: 4rem;
+    margin-top: 0rem;
   }
   
   /* ==== Overlay Filters ==== */
@@ -182,7 +183,7 @@ body, html {
   #productsFilter {
     /* top: 300px; */
     /* left: 20px; */
-    height: 400px;
+    height: 378px;
     width: auto;
   }
   
@@ -265,9 +266,15 @@ body, html {
   
   #loadData {
     position: absolute;
-    bottom: 20px;
-    right: 20px;
+    /* bottom: 20px; */
+    right: 12px;
     z-index: 5;
+  }
+  
+  #resetForm {
+    background-color: white;
+    color: #6a5acd;
+    border: 1px solid #6a5acd;
   }
   
   /* ==== Visualization Area ==== */
@@ -285,25 +292,31 @@ body, html {
   }
 
   .tradeVisualization {
+    position: absolute;
+    bottom: 0;
+    left: 18rem;
+    width: calc(100% - 18rem);
     height: 400px;
-    background: #ffffff;
+    /* background: transparent; */
+    background-color: rgba(255, 255, 255, 0.75);
     padding: 1rem 2rem;
-    z-index: 1;
-    margin-left: 18rem;
-    /* overflow: hidden; */
+    box-shadow: 0 -2px 8px rgba(0,0,0,0.2);
+    z-index: 20;
+    transform: translateY(100%);
+    transition: transform 0.5s ease-out;
+    display: none;
+  }
+
+  .tradeVisualization.visible {
+    transform: translateY(0);
+    display: block;
   }
 
   #graph {
-    height: 300px;
-    width: 100%;
-  }
-  /*
-  .chart, #graph {
-    height: 100%;
-    width: 100%;
-    margin: 20px 0;
-    z-index: 2;
-    background: #f9f9f9;
+    position: relative;
+    bottom: auto;
+    transform: none;
+    transition: none;
   }
   
   /* ==== Footer ==== */

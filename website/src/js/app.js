@@ -1,6 +1,6 @@
 // entry point for the app
 
-import { renderWorldMap } from './worldmap.js';
+import { renderWorldMap, reset_map } from './worldmap.js';
 import { initTradeTrend } from './tradeTrend.js';
 import { setupDateValidation } from './date.js';
 
@@ -26,12 +26,6 @@ function loadData() {
 function setupForm() {
     // Toggle sidebar
     const sidebar = document.getElementById('sidebar');
-    // document.querySelector('.toggle-btn').addEventListener('click', () => {
-    //   sidebar.classList.toggle('open');
-    // });
-    // document.querySelector('.close-btn').addEventListener('click', () => {
-    //   sidebar.classList.remove('open');
-    // });
 
     // Handle form submission
     document.getElementById('filter-form').addEventListener('submit', function(e) {
@@ -44,7 +38,15 @@ function setupForm() {
         end: formData.get('end')
       };
       console.log('Filters applied:', filters);
-      // TODO: trigger your data/query update based on filters
+      const section = document.querySelector('.tradeVisualization');
+      section.classList.add('visible');
+    });
+
+    document.getElementById('resetForm').addEventListener('click', function(e) {
+      reset_map();
+      const section = document.querySelector('.tradeVisualization');
+      section.classList.remove('visible');
+      d3.select('#graph').select('svg').remove();
     });
 }
 

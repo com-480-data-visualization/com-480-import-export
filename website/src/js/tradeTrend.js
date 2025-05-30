@@ -29,7 +29,7 @@ export function aggregateYearlyTotals(data) {
 export function renderTradeTrend(containerSelector, data, startDate, endDate) {
     // ---- 1) SETUP & FLATTEN ----
     d3.select(containerSelector).select("svg").remove();
-    const width  = 1000,
+    const width  = 1080,
           height = 300,
           margin = { top: 20, right: 30, bottom: 50, left: 60 };
   
@@ -144,7 +144,7 @@ export function renderTradeTrend(containerSelector, data, startDate, endDate) {
     yAxisG.append("text")
         .attr("fill", "currentColor")        // inherit axis text color
         .attr("transform", "rotate(-90)")     // rotate so it reads bottom→top
-        .attr("y", -margin.left + 30)         // move it left of the axis line
+        .attr("y", -margin.left - 3)         // move it left of the axis line
         .attr("x", - (height - margin.top - margin.bottom) / 2)  
         .attr("dy", "1em")                    // small offset down
         .style("text-anchor", "middle")       // center alignment
