@@ -149,7 +149,7 @@ function setupLogButton() {
 
 function init() {
   renderTree();
-  setupLogButton();
+  // setupLogButton();
 }
 
 window.initProductList = init;

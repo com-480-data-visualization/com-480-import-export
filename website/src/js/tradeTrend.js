@@ -1,4 +1,4 @@
-
+import { getSelectedPaths } from './product_list.js';
 // --- Aggregation ---
 export function aggregateYearlyTotals(data) {
     const groupedData = {};
@@ -195,24 +195,51 @@ export function initTradeTrend() {
                     alert("Please select 1 country");
                     return;
                 }
-                // TODO
-                const tnNum = '3004.1000' // document.getElementById('tnFilter').value; // Trade number
-                console.log("Trade Type Filter:", tradeTypeFilter, "Start Date:", startDate, "End Date:", endDate, "Country ID:", ctryId, "Trade Number:", tnNum);
+
+                // const tnNum = '3004.1000' // document.getElementById('tnFilter').value; // Trade number
+                let selectedTnNum = [];
+                getSelectedPaths().forEach(path => {
+                  console.log(path)
+                  selectedTnNum.push(path.at(-1)); // push last element
+                });
+                
+                console.log("Trade Type Filter:", tradeTypeFilter, "Start Date:", startDate, "End Date:", endDate, "Country ID:", ctryId, "Trade Numbers:", selectedTnNum);
                 const startYear = startDate.split('-')[0]; // Extract year
                 const endYear = endDate.split('-')[0]; // Extract year
-                let fetchedData;
-                if (tradeTypeFilter === 'import') {
-                    fetchedData = await fetchImportData(startYear, endYear, ctryId, tnNum);
-                } else if (tradeTypeFilter === 'export') {
-                    fetchedData = await fetchExportData(startYear, endYear, ctryId, tnNum);
-                }
+                let fetchedDataAll = {};
+                
+                for (let tnNum of selectedTnNum) {
+                    fetchedDataAll[tnNum] = {}; // Initialize an array for each TN number
+                    console.log("Fetching data for TN Number:", tnNum);
+                    if (tradeTypeFilter === 'import') {
+                      let fetchedData = await fetchImportData(startYear, endYear, ctryId, tnNum);
+                      console.log("Fetched Import Data:", tnNum, fetchedData);
+                      fetchedDataAll[tnNum] = {"import": fetchedData}; // Store data for each TN number
+                    } else if (tradeTypeFilter === 'export') {
+                        let fetchedData = await fetchExportData(startYear, endYear, ctryId, tnNum);
+                        console.log("Fetched Export Data:", tnNum, fetchedData);
+                        fetchedDataAll[tnNum] = {"export": fetchedData}; // Store data for each TN number
+                    } else if (tradeTypeFilter === 'both') {
+                        const importData = await fetchImportData(startYear, endYear, ctryId, tnNum);
+                        const exportData = await fetchExportData(startYear, endYear, ctryId, tnNum);
+                        fetchedDataAll[tnNum] = {"export": exportData, "import": importData};
+                    }
+                    console.log("All", fetchedDataAll)
+                    console.log(Object.keys(fetchedDataAll).length, "Trade Numbers fetched");
 
-                if (fetchedData.length !== 0) {
-                    renderCurrentTrend(startDate, endDate, fetchedData);
-                } else {
-                    alert("No data found for the selected filters.");
+                    const hasAny = Object.values(fetchedDataAll).some(sub =>
+                      Object.values(sub).some(arr => arr.length > 0)
+                    );
+                    console.log(hasAny); // true
+
+                    if (hasAny) {
+                        renderCurrentTrend(startDate, endDate, fetchedDataAll);
+                    } else {
+                        alert("No data found for the selected filters.");
+                    }
+                    
                 }
-                console.log("Fetched Data:", fetchedData);
+                
             };
         }
     }
