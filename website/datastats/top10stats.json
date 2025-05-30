@@ -26,9 +26,9 @@
         "value": 62022640203.0,
         "short_name": "Crude oil"
       },
-      "Unknown (2716.0000)": {
+      "Electrical energy": {
         "value": 61553549082.0,
-        "short_name": "Unknown"
+        "short_name": "Electrical energy"
       },
       "Motor cars and other motor vehicles principally designed for the transport of persons, incl. station wagons and racing cars, with spark-ignition internal combustion reciprocating piston engine of a cylinder capacity > 1500 cm3 but =< 3000 cm3, weighing > 1200 kg, but =< 1600 kg each (excl. bus of heading 8702 and special motor vehicles of heading 8703.1000)": {
         "value": 61346164381.0,
@@ -79,9 +79,9 @@
         "value": 95265368695.0,
         "short_name": "Luxury watches"
       },
-      "Unknown (2716.0000)": {
+      "Electrical energy": {
         "value": 76908389391.0,
-        "short_name": "Unknown"
+        "short_name": "Electrical energy"
       },
       "Gold, incl. gold plated with platinum, in semi-manufactured forms, for non-monetary purposes": {
         "value": 73021827117.0,
