@@ -263,7 +263,7 @@ export function initTradeTrend() {
                         const section = document.querySelector('.tradeVisualization');
                         section.classList.add('visible');
                     } else {
-                        alert("No data found for the selected filters.");
+                        console.warn("No data found for the selected filters.");
                     }
                     
                 }

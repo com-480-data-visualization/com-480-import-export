@@ -21,11 +21,11 @@ const svg = d3.select('#map')
 export function renderWorldMap() {
     d3.json('./data/countries.geo.json')
         .then(worldData => {
-            console.log('GeoJSON DATA:', worldData); 
+            // console.log('GeoJSON DATA:', worldData); 
             draw_countries(worldData.features);
 
             const countries = worldData.features.map(d => d.properties.name);
-            console.log('Country names from data:',  countries); 
+            // console.log('Country names from data:',  countries); 
             showDropDown(worldData.features, highlight_country);
 
         })

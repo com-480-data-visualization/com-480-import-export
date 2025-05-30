@@ -153,6 +153,7 @@ export function lookupText(path) {
 }
 
 function init() {
+  console.log("Initializing product list...");
   renderTree();
   // setupLogButton();
 }

@@ -3,13 +3,11 @@ export async function showDropDown(countries, onSelectCountry) {
 
     // Load the country_matched.csv file
     const csvData = await d3.csv('data/country_matched.csv');
-    console.log(csvData);
 
     const countryOptions = csvData.map(d => ({
         map_name: d.map_name,
         ctry_id: d.ctry_id
     }));
-    console.log(countryOptions);
 
     const countryOptionsSorted = countryOptions.sort((a, b) => a.map_name.localeCompare(b.map_name));
     // console.log('Sorted Country Options:', countryOptionsSorted);
