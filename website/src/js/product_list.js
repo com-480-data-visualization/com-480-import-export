@@ -20,7 +20,7 @@ function allChildrenSelected(path, node) {
   });
 }
 
-function getSelectedPaths(node = productData, path = []) {
+export function getSelectedPaths(node = productData, path = []) {
   const kids = getKids(node);
   if (kids.length === 0) return isSelected(path) ? [path] : [];
   if (allChildrenSelected(path, node)) return [path];

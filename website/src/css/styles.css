@@ -285,16 +285,16 @@ body, html {
   }
 
   .tradeVisualization {
-    height: 600px;
+    height: 400px;
     background: #ffffff;
     padding: 1rem 2rem;
     z-index: 1;
-    margin-left: 15rem;
+    margin-left: 18rem;
     /* overflow: hidden; */
   }
 
   #graph {
-    height: 500px;
+    height: 300px;
     width: 100%;
   }
   /*
