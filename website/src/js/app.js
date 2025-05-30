@@ -38,8 +38,7 @@ function setupForm() {
         end: formData.get('end')
       };
       console.log('Filters applied:', filters);
-      const section = document.querySelector('.tradeVisualization');
-      section.classList.add('visible');
+      
     });
 
     document.getElementById('resetForm').addEventListener('click', function(e) {

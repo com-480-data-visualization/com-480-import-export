@@ -218,7 +218,7 @@ export function initTradeTrend() {
                 }
                 const ctryId = document.getElementById('countries-dropdown').value // Country ID
                 if(!ctryId) {
-                    alert("Please select 1 country");
+                    alert("Please select a country");
                     return;
                 }
 
@@ -260,12 +260,13 @@ export function initTradeTrend() {
 
                     if (hasAny) {
                         renderCurrentTrend(startDate, endDate, fetchedDataAll, selectedTnNum);
+                        const section = document.querySelector('.tradeVisualization');
+                        section.classList.add('visible');
                     } else {
                         alert("No data found for the selected filters.");
                     }
                     
                 }
-                
             };
         }
     }

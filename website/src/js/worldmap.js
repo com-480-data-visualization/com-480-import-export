@@ -40,14 +40,14 @@ function highlight_country(country_data) {
     if(country_data.properties.name === 'Switzerland') {
         svg.selectAll('.country')
         .filter(d => d.properties.name === country_data.properties.name)
-        .attr('fill', 'red');
+        .attr('fill', '#6a5acd');
     } else {
         svg.selectAll('.country')
             .attr('fill', '#e0e0e0');
 
         svg.selectAll('.country')
             .filter(d => d.properties.name === country_data.properties.name)
-            .attr('fill', 'orange');
+            .attr('fill', '#6a5acd');
 
         // Update the dropdown selection
         const dropdown = d3.select('#countries-dropdown');

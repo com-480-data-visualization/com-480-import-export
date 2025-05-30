@@ -373,14 +373,11 @@ body, html {
   form label { display: block; margin-bottom: 5px; }
 
   /* ==== Product Selector ==== */
-   #product-selector {
-    /* overflow-y: auto; */
+  #product-selector {
     overflow-x: hidden;
     height: 90%;
     max-height: 90%;
-    /* width: 100%; */
     width: auto;
-    /* background: #dbd7fa; */
     border-radius: 0px;
     border: 0px solid #eee;
     padding: 0rem;
@@ -394,7 +391,6 @@ body, html {
   #product-selector * {
     box-sizing: border-box;
     word-break: break-word;
-    /* max-width: 100%; */
   }
 
   #product-selector div {
