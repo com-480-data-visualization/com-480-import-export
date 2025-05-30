@@ -73,8 +73,58 @@ View our [Milestone 2 PDF Report](milestone2/com_480_ms2.pdf) and the early vers
 
 ## Milestone 3 (30th May, 5pm)
 
-**80% of the final grade**
+### Technical Setup and Intended Usage
 
+The Swiss Trade Visualizer is divided into two main sections: an **interactive map** and **statistical dashboards**. Each part uses a distinct technical architecture optimized for performance and usability.
+
+---
+
+### Interactive Map
+
+The interactive map enables users to explore Switzerland’s trade relationships by selecting specific countries, years, and product categories.
+
+However, since the underlying dataset contains nearly **50 million entries**, in-browser aggregation was **not feasible**. Several technical solutions were explored:
+
+- **Preprocessing for client use**: Worked well for summary data, but not for dynamic queries.
+- **Storing raw CSVs on Amazon S3**: Too slow (~2 minutes per query).
+- **Storing pre-aggregated CSVs on S3**: Still slow (~1 minute per query).
+- **Final solution**:
+  - The dataset is stored in an **Amazon RDS PostgreSQL** database.
+  - We created **Materialized Views** that precompute commonly used aggregations (by year, country, product).
+  - Two **API endpoints**, powered by **AWS Lambda**, expose the data—one for imports and one for exports.
+  - These APIs allow queries by:
+    - Time range
+    - Country
+    - Product type (specific tariff or grouped category)
+
+This solution drastically reduced query times and made the map highly responsive and interactive.
+
+---
+
+### Statistical Dashboards
+
+The statistics page provides clean, informative visualizations through bar charts, pie charts, and more. Unlike the map, this section prioritizes fast access and readability over full interactivity.
+
+- All visualizations are based on **preprocessed `.json` files**.
+- These files are stored **locally** in the repository.
+- This allows for:
+  - **Instant loading**
+  - **No server interaction**
+  - **Better performance across devices**
+
+This trade-off complements the interactive map: while the map supports deep exploration, the dashboard offers quick, curated insights.
+
+---
+
+### Project Structure
+
+```
+com-480-import-export/
+├── python/ # Data preprocessing scripts
+├── website/ # Frontend code (HTML, CSS, JS, JSON)
+├── environment.yml # Conda environment file for dependencies
+```
+---
 
 ## Late policy
 
